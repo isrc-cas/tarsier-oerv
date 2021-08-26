@@ -47,7 +47,7 @@
 
    
 
-3. 运维保障：构建平台/环境搭建改进
+3. 运维保障（辅助加速）：构建平台/环境搭建改进
 
    - 【已完成】构建虚拟机使用PLCT改过的 32c 32g qemu
    - 9.27左右PLCT搭建的OBS将会上线：
@@ -70,41 +70,6 @@
 
 ## 其它
 
-1、变更通知：
-
-所有PLCT的实习生和同事：
-
-从8月25日开始，oE/RV项目的任务分解和进度跟踪转入GitHub/issues和GitHub/projects进行管理。变更原因：
-
-
-
-1. 转入GitHub之后，实习生的进度报告将从「外部不可见」变更为「外部可见交付」，在GitHub/issues上的评论和进展报告会体现在实习生的GitHub账号活动上（俗称【贴瓷砖】）。这对于实习生后续寻找工作和同性交友能都有帮助。
-
-2. 吴伟对于日常工作交流中不能用数字简洁快速精准的指代issues感到恼火，沟通效率被gitee愚蠢的hash表示拉低了。在PLCT，效率是生存的前提。
-
-3. 即将上线的 OBS 等服务，需要更为频繁的权限管理。目前在gitee上的各类仓库和oE-OBS上的权限申请过程太长，通过自建 构建-任务管理-自动化测试 的独立能够有效的提高效率。
-
-4. 吴洁跟我后续会开始进行一系列的自动化脚本，建立更为方便的CI体系。而 GitHub-slack-OBS 的API体系我比较熟悉，做起来最快。
-
-5. 我们需要从9月份开始迎接数倍于8月的团队规模。现有的微信群沟通方式逐渐失去效率。
-
- 
-
-@席静 负责收集实习生的GitHub账号并转给ww做授权。（在9月1日之前完成）
-
-@吴洁 后续负责写脚本实现github/issues上的状态抓取和OBS构建状态向GitHub和Slack的机器人搭建（都是从9月1日之后开始）
-
- 
-
-（Slack 大概从9月1日开始使用，还在准备。下周发通知。）
-
- 
-
-- openeuler riscv github issue：https://github.com/plctlab/openEuler-riscv/issues
-- 看板：https://github.com/plctlab/openEuler-riscv/projects/1
-
-
-
-2、构建失败分类管理：
+构建失败分类管理：
 
 欢迎大家一起维护构建失败分类管理：https://gitee.com/openeuler/RISC-V/issues/I45G4I
