@@ -8,7 +8,7 @@
 | 马驰                   | 技术导师   |            | mc964203886   | mc964203886         |      |
 | 吴洁                   | 测试主管   |            | jean9823      | jiewu-plct          |      |
 | 刘佳伟                 | 在职实习生 | LV2        | liujiawei     | liujiawei929        |      |
-| 孙喆炘  [zhé xīn]      | 在职实习生 | LV2        | pandagix      | zxs-un              |      |
+| 孙喆炘  [zhé xīn]      | 在职实习生 | LV2        | zxs-un      | zxs-un              |      |
 | 李诗洋                 | 在职实习生 | LV1 | lishiyangasdf | asdf1113            |      |
 | 孙浩翔                 | 在职实习生 | LV1 | maximsuen     | MaximSuen           |      |
 | 许志凌                 | 在职实习生 | LV1 | xinminst  | xinminst            |      |
