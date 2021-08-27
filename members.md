@@ -15,7 +15,5 @@
 | 邹通成                 | 在职实习生 | LV1 |               | Wenxiang233         |      |
 | 许嘉玲                 | 在职实习生 | LV1 |               | glutinous-rice-wine |      |
 | 颛孙宇翔   [zhuān sūn] | 在职实习生 | LV1 |               | YuXiang-ZhuanSun    |      |
-| 李心仪                 | 志愿者     |  | KaylaLi       |                     |      |
-| 杜顺利                 | 离职       |  | dushunli      |                     |      |
 | 旭舟                 | 华为 oE/RV 负责       |  | whoisxxx      |      whoisxxx      |      |
 
