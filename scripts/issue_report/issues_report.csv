@@ -1,0 +1,36 @@
+﻿ID,Title,Labels,Issue Link,Created Time,Assignees,Time For Last Comment,Member For Last Comment
+1,[meta] 将 openEuler RISC-V 项目的日产管理从gitee和微信群转入到gh/issues（9月1日前完成切换）,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/1, 2021-08-25 00:31:53,席静, 2021-08-25 16:22:08,席静
+2,为oE/RV创建独立的OBS服务（master）,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/2, 2021-08-25 00:53:50,吴伟,                    ,  
+3,为oE/RV的OBS提供至少300个vcore（虚拟机cpu）用于构建。,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/3, 2021-08-25 00:54:42,吴伟,                    ,  
+4,尝试将带有 1T nvme 的 sifive unmatched 接入到 oE/RV OBS 看看能否加速构建,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/4, 2021-08-25 00:55:18,吴伟,                    ,  
+5,[meta] 实现 openEuler for RISC-V 所有的不到一万个包能够在24小时内全部构建1-2次,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/5, 2021-08-25 00:55:51,吴伟,                    ,  
+6, 为席静和吴洁开放本仓库的 maintainer 权限,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/6, 2021-08-25 00:56:20,吴伟,                    ,  
+7,确保所有实习生都在9月1日前加入 oe-rv 项目中并更新手里的任务状态,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/7, 2021-08-25 00:57:03,席静,                    ,  
+8,考虑是否可以创建一个slack群组作为自动化机器人的连接器来使用,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/8, 2021-08-25 01:44:51,吴伟,                    ,  
+9,准备9月23日的 D1-oE-BishengJDK 演示,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/9, 2021-08-25 08:53:14,"王俊强,席静",                    ,  
+10,在9月1日之前在D1上跑起来openEuler的图形界面（LXDE或者XFce这样的）,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/10, 2021-08-25 08:53:19,王俊强,                    ,  
+11,请项目组各实习生和员工登记github账号,documentation,https://api.github.com/repos/plctlab/openEuler-riscv/issues/11, 2021-08-25 09:05:15,  , 2021-08-25 12:02:43,颛孙宇翔[zhuānsūn]
+12,[meta] 通过本地构建方式分析包构建失败问题,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/12, 2021-08-25 10:19:59,  ,                    ,  
+13,[rpmbuild] webkit2gtk,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/13, 2021-08-25 10:21:40,  ,                    ,  
+14,[rpmbuild] gcc,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/14, 2021-08-25 10:22:01,孙喆炘[zhéxīn], 2021-08-25 14:34:41,孙喆炘[zhéxīn]
+15,[rpmbuild] llvm,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/15, 2021-08-25 10:23:47,刘佳伟,                    ,  
+16,[rpmbuild] python-scons,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/16, 2021-08-25 10:24:43,马驰,                    ,  
+17,[rpmbuild] openblas,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/17, 2021-08-25 10:26:28,邹通成,                    ,  
+19,[rpmbuild] abrt,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/19, 2021-08-25 13:14:23,李诗洋,                    ,  
+20,[rpmbuild] libX11,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/20, 2021-08-25 13:40:43,许嘉玲,                    ,  
+21,阅读下GitHub的API，用 Python/JS/Bash 的任何一种脚本语言，写给小工具，对 GitHub issues 的内容进行分析,      工具开发,https://api.github.com/repos/plctlab/openEuler-riscv/issues/21, 2021-08-25 13:50:55,吴洁, 2021-08-27 21:56:24,席静
+22,[rpmbuild] http-parser,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/22, 2021-08-25 13:55:44,许志凌,                    ,  
+23,[rpmbuild] findutils,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/23, 2021-08-25 14:19:51,孙浩翔,                    ,  
+24,[rpmbuild] cmake,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/24, 2021-08-25 14:26:46,颛孙宇翔[zhuānsūn], 2021-08-26 10:45:39,吴伟
+25,验证在 D1 上跑 openEuler，启动 docker，容器里跑 debian 和 ubuntu,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/25, 2021-08-25 20:29:22,"吴伟,吴洁", 2021-08-27 17:37:35,mollybuild
+27,确认下 oE上部分 PKG_CONFIG 缺失的问题？,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/27, 2021-08-26 10:30:35,"王俊强,wxjstz,席静,吴洁", 2021-08-26 10:32:58,吴伟
+28,20210901 实习生外部可见交付物汇总表,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/28, 2021-08-26 10:36:18,席静, 2021-08-27 13:01:26,马驰
+31,请大家为自己的github修改name,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/31, 2021-08-27 09:47:43,"孙浩翔,马驰,刘佳伟,李诗洋,颛孙宇翔[zhuānsūn],许志凌,许嘉玲,孙喆炘[zhéxīn]", 2021-08-27 18:52:09,席静
+32,[meta] 请大家通过osc的方式完成一个包的本地构建,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/32, 2021-08-27 10:15:50,"孙浩翔,邹通成,马驰,刘佳伟,李诗洋,颛孙宇翔[zhuānsūn],席静,许志凌,许嘉玲,孙喆炘[zhéxīn]", 2021-08-27 17:23:54,席静
+33,osc本地构建和解决包失败的步骤和思路,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/33, 2021-08-27 10:57:54,"王俊强,席静",                    ,  
+34,qemu 进行osc本地编译后rpm快速同步方式,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/34, 2021-08-27 11:46:20,  , 2021-08-27 19:43:04,吴伟
+35,obs-worker 机器的软件安装汇总贴,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/35, 2021-08-27 13:50:38,"吴伟,王俊强",                    ,  
+37,[obs知识] 教你找一个优先级较高的包,documentation,https://api.github.com/repos/plctlab/openEuler-riscv/issues/37, 2021-08-27 17:16:21,  , 2021-08-27 17:17:24,席静
+38,[meta] 在新obs工程中建立riscv BaseOS,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/38, 2021-08-27 17:35:13,孙喆炘[zhéxīn],                    ,  
+39,[baseos] 包依赖关系分析,          ,https://api.github.com/repos/plctlab/openEuler-riscv/issues/39, 2021-08-27 20:05:59,吴洁, 2021-08-27 20:16:06,席静
+40,写一个脚本，每天早上9点运行一次，抓取所有 PLCT Lab 同学提交给 oE 项目的 MR 的状态，自动生成一个报表（列表）,      工具开发,https://api.github.com/repos/plctlab/openEuler-riscv/issues/40, 2021-08-27 21:50:17,吴洁, 2021-08-27 21:51:15,吴伟
