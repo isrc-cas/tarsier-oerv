@@ -2,7 +2,7 @@
 
 ### 1. 项目背景
 
-参考文档：
+参考文档：[项目介绍](https://github.com/plctlab/openEuler-riscv/blob/main/quicklystartbuild/introduction.md)
 
 
 
