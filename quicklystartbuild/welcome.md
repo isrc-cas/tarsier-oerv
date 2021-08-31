@@ -62,11 +62,24 @@
    [OBS官方用户指导：obs-user-guide](https://openbuildservice.org/help/manuals/obs-user-guide/)
 
    > 在B站、QQ群文件已经有不少视频，但是这里还是要推荐这个网站，更加全面。在B站、QQ群文件中已经有了OBS构建的视频。但是这里还是推荐。
+   
+5. [技术报告分享汇总](https://github.com/plctlab/openEuler-riscv/wiki/%E5%88%86%E4%BA%AB%E6%8A%A5%E5%91%8A)
+
+   
+
+## 二、项目现状
+
+- [项目最新现状（保持定期更新）](https://github.com/plctlab/openEuler-riscv/blob/main/weeklyreports/projectReport.md)
+- 项目双周进展
+  - [PLCT工作总结 [7.16-7.28]](https://github.com/plctlab/openEuler-riscv/blob/main/weeklyreports/PLCT%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93%20%5B7.16-7.28%5D.md)
+  - [PLCT工作总结 [7.29-8.11]](https://github.com/plctlab/openEuler-riscv/blob/main/weeklyreports/PLCT%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93%20%5B7.29-8.11%5D.md)
+  - [PLCT工作总结 [8.12-8.25]](https://github.com/plctlab/openEuler-riscv/blob/main/weeklyreports/PLCT%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93%20%5B8.12-8.25%5D.md)
+- [项目组成员（PLCT）](https://github.com/plctlab/openEuler-riscv/blob/main/members.md)
 
 
 
+## 三、其它
 
-## 二、其它
 ### openEuler社区
 
 由于我们的工作管理和成果提交是在openEuler社区上，因此需要了解openEuler社区的一些基本管理规范与要求。参考资料如下：
