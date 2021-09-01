@@ -16,4 +16,4 @@
 | 许嘉玲                 | 在职实习生 | LV1 |               | glutinous-rice-wine |      |
 | 颛孙宇翔   [zhuān sūn] | 在职实习生 | LV1 |               | YuXiang-ZhuanSun    |      |
 | 旭舟                 | 华为 oE/RV 负责       |  | whoisxxx      |      whoisxxx      |      |
-
+| 高世豪                 | 在职实习生 | LV1 | ShihaoGao     | ShiHaoGao           |     |
