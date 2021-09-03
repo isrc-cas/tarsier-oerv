@@ -18,3 +18,4 @@
 | 旭舟                 | 华为 oE/RV 负责       |  | whoisxxx      |      whoisxxx      |      |
 | 吕晓倩                 | 测试开发       |  | lvxiaoqian      |      lvxiaoqian555      |      |
 | 高世豪                 | 在职实习生 | LV1 | ShihaoGao     | ShiHaoGao           |    |
+| 袁政                   |在职实习生  | LV1 | YuanZheng612  | YuanZheng612        |     |
