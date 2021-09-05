@@ -17,7 +17,7 @@ LIST='members.md'
 cat "$LIST" | grep '|' | tail -n +3 | cut -f6 -d'|' | \
 while read s; do
 	echo "====$s===="
-	pp curl https://github.com/${s}.keys > pubkeys/pubkeys.${s}
+	curl https://github.com/${s}.keys > pubkeys/pubkeys.${s}
 done
 
 echo "Have a nice day."
