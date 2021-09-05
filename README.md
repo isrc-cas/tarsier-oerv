@@ -19,3 +19,7 @@ PLCT实验室所有做 openEuler 的实习生要求在本repo/issues中进行进
 欢迎加入！我们有一个公开的 openEuler RISC-V 微信群，目前已经有一百多位社区的伙伴。欢迎加入。请添加PLCT实验室吴伟（fangzhang1024）的微信，邀请进入（请标注「openeuler」或者「RISC-V」方便通过）
 
 欢迎同学们来实习！
+
+## 如何开始项目？
+[点击从这里开始学习！](https://github.com/plctlab/openEuler-riscv/wiki/%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%85%A5openEuler-riscv%EF%BC%81)
+
