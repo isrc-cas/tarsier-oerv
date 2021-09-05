@@ -1,0 +1,27 @@
+// packges dependency table
+digraph {
+	"rpm-build"
+	BareBonesBrowserLaunch
+	"python3-pandas"
+	"java-devel"
+	"javapackages-local"
+	"python3-scikit-optimize"
+	sqlite
+	"golang-bin"
+	"procps-ng"
+	jets3t
+	openssl
+	"python3-xgboost"
+	atune
+	"rpm-build" -> atune
+	"golang-bin" -> atune
+	"procps-ng" -> atune
+	sqlite -> atune
+	openssl -> atune
+	"python3-scikit-optimize" -> atune
+	"python3-pandas" -> atune
+	"python3-xgboost" -> atune
+	"java-devel" -> BareBonesBrowserLaunch
+	"javapackages-local" -> BareBonesBrowserLaunch
+	BareBonesBrowserLaunch -> jets3t
+}
