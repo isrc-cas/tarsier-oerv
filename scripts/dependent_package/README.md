@@ -28,7 +28,7 @@ requirements.txt 执行该文件夹中的py档需要安装的python第三方库
 
 2）由于查询所使用的buildrequiresfile.json中存储的包名分别是spec文件中的Name和BuildRequires栏位的包名，所以写入需要查询的包名必须要与spec文件中的Name和BuildRequires栏位的包名保持一致，否则会查询不到
 
-3）由于依赖关系图是由graphviz生成的，所以需要电脑上安装graphviz程序，graphviz安装程序下载地址http://www.graphviz.org/download/
+3）运行前需要安装requirements.txt里python第三方库，执行pip install -r requirements.txt可一次性安装，另外由于依赖关系图是由graphviz生成的，所以还需要安装graphviz程序，graphviz安装程序下载地址http://www.graphviz.org/download/
 
 
 
