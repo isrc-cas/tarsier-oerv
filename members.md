@@ -20,4 +20,5 @@
 | 高世豪                 | 在职实习生 | LV1 | ShihaoGao     | ShiHaoGao           |    |
 | 袁政                   |在职实习生  | LV1 | YuanZheng612  | YuanZheng612        |     |
 | 刘洋                 | 在职实习生 | LV1 | LiuY328     | LiuYang328           |    |
+| 温智翔                 |在职实习生  | LV1 | WenZhixiang   | WenZhixiang      |     |
 | 杨心仪                 | 在职实习生 | LV1 | yxychristina     | yxycrhistina           |    |
