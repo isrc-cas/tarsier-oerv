@@ -44,11 +44,10 @@
    - D1+openEuler：D1 openEuler 第五版镜像(xfce)下载地址：（暂时未公开到plct mirror，计划解决一些问题后再更新）
 
    - [bishengJDK](https://gitee.com/openeuler/RISC-V/issues/I28H7L?from=project-issue)：本地编译运行测试通过；**rpm打包后续在obs构建平台中补充；**
-
-      后续：
-
+   
+   ​    后续：
+   
    - 以上镜像的内核是基于`Linux openEuler-RISCV-rare 5.4.61 `,接下来升级到5.10；
-
    - 继续集成docker、xfce等更多功能。
 
    
@@ -62,8 +61,14 @@
      
 
 
-6. 测试工作 @吴洁 
-
+6. 工具开发 @吴洁
+   - 对openEuler:Mainline:RISC-V现有的4000+个包的spec文件描述的依赖关系BuildRequires进行数据抓取和分析，[统计到被依赖最多的包如下图所示](https://github.com/plctlab/openEuler-riscv/issues/72)：
+   
+     ![image](images/132132349-41c814be-e639-435f-94a0-e868525f326a.png)
+   
+     
+   
+7. 测试工作 @吴洁 
    - D1 openEuler 第五版镜像(xfce)测试：[问题列表](https://github.com/plctlab/openEuler-riscv/issues?q=is%3Aissue+is%3Aopen+xfce)
    - [bishengJDK java demo下棋游戏在[D1 openEuler 第五版镜像(xfce)]上的运行测试](https://github.com/plctlab/openEuler-riscv/issues/90)
 
@@ -71,7 +76,12 @@
 
 ## 未来两周计划
 
-如上；
+1. 重点针对obs构建中的问题进行跟进。
+   - 工作流程
+   - 待解决包list
+2. D1镜像的升级
+   - 包含kernel升级到5.10
+   - xfce一些重要问题的解决
 
 
 
