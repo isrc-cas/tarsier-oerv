@@ -8,14 +8,9 @@ buildrequire_filepath = os.path.join(os.getcwd(), 'buildrequiresfile.json')
 excelfile = os.path.join(os.getcwd(), 'packagelist.xlsx')
 
 def get_requires(packagelist, datafile):
-    # with open(packagelistfile, 'r') as f:
-    #     packagelistdata = json.load(f)
-    
     with open(datafile, 'r') as f:
         requiresdata = json.load(f)
 
-    # failpackagelist = packagelistdata['unresolvable']
-    # passpackagelist = packagelistdata['succeeded']
     requireslist = []
     for pkg in packagelist:
         for item in requiresdata:
@@ -25,23 +20,6 @@ def get_requires(packagelist, datafile):
     print ('requireslist', len(requireslist))
     return requireslist
 
-# def get_passrequires(packagelistfile, datafile):
-#     with open(packagelistfile, 'r') as f:
-#         packagelistdata = json.load(f)
-    
-#     with open(datafile, 'r') as f:
-#         requiresdata = json.load(f)
-
-#     # failpackagelist = packagelistdata['unresolvable']
-#     passpackagelist = packagelistdata['succeeded']
-#     requireslist = []
-#     for pkg in passpackagelist:
-#         for item in requiresdata:
-#             if pkg == item['package']:
-#                requireslist = requireslist + item['buildrequires']
-#     requireslist = list(set(requireslist))
-#     print ('pass requireslist', len(requireslist))
-#     return requireslist
 
 def compare_requires(faillist, passlist):
     comparelist = [x for x in faillist if x not in passlist]
@@ -56,7 +34,7 @@ def create_excelfile(packagelistfile, requiresdata, comparedata, excelfile):
     ws = wb.active
     ws.title = 'succeeded packages'
     wb.create_sheet("unresolvable packages requires",1)
-    wb.create_sheet("unresolvable requires not in succeeded requires",2)
+    wb.create_sheet("unresolvable requires not in succeeded",2)
     wb.save(excelfile)
     wb = load_workbook(excelfile)
     ws = wb.worksheets[0]
