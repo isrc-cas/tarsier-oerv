@@ -14,11 +14,19 @@ buildrequiresfile.json 存放所有包的依赖包的信息
 
 inputfile.json 提供给用户输入需要查询的包，可输入多个
 
-run.py 执行改文件可生成所要查询包的（inputfile.json里输入的包）相关依赖和被依赖包的关系图（pdf文档）
+run.py 执行该文件可生成所要查询包的（inputfile.json里输入的包）相关依赖和被依赖包的关系图（pdf文档）
 
 graph-output 生成的关系图存放在该文件夹中
 
 requirements.txt 执行该文件夹中的py档需要安装的python第三方库
+
+getobs.py 执行该文件会抓取https://build.openeuler.org/project/monitor/openEuler:Mainline:RISC-V 界面的unresolvable和succeeded状态的包,并将获得这些包存放在packagelist.json中
+
+packagelist.json 存放getobs.py中获取的unresolvable和succeeded状态的包
+
+getfailrequires.py 生成packagelist.xlsx report
+
+packagelist.xlsx 第一个sheet内容是https://build.openeuler.org/project/monitor/openEuler:Mainline:RISC-V 界面succeeded状态的包；第二个sheet内容是unresolvable状态的包的所有依赖包；将所有unresolvable状态的包的依赖包和所有succeeded状态的包的依赖包用自动化做了对比(没有去掉-dev，pkgconfig等后缀)，这样对比出来的没有在succeeded中的依赖包存放在第三个sheet
 
 ##### 3. 使用方法
 

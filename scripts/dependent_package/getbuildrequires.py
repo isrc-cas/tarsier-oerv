@@ -56,7 +56,7 @@ def get_buildrequires(headers, params, specfile, requirefile):
             # print ('newitemlist', itemlist)
             requirespkg_list = requirespkg_list + itemlist
         # print ('requirespkg_list', requirespkg_list)
-        requirespkg_dict = dict(packagename=packagename, buildrequires=requirespkg_list)
+        requirespkg_dict = dict(package=specfile['package'], packagename=packagename, buildrequires=requirespkg_list)
         print ('requirespkg_dict', requirespkg_dict)
         requirepakcage_list.append(requirespkg_dict)
         print ('requirepakcage_list length', len(requirepakcage_list))
