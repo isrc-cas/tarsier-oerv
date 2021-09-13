@@ -3,9 +3,9 @@
 3. 将PR链接定义在watchlist.txt中
 4. 修改setCron.py中command中的相关路径
 5. 运行setCron.py
-'''
+```
 python3 setCron.py
 crontab -l
-'''
+```
 可以看到配置的job<br>
 目前定义的是每周三早上9点，可以根据需要修改
