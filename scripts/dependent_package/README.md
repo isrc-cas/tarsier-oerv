@@ -37,6 +37,7 @@ packagelist.xlsx 第一个sheet内容是https://build.openeuler.org/project/moni
 2）由于查询所使用的buildrequiresfile.json中存储的包名分别是spec文件中的Name和BuildRequires栏位的包名，所以写入需要查询的包名必须要与spec文件中的Name和BuildRequires栏位的包名保持一致，否则会查询不到
 
 3）运行前需要安装requirements.txt里python第三方库，执行pip install -r requirements.txt可一次性安装，另外由于依赖关系图是由graphviz生成的，所以还需要安装graphviz程序，graphviz安装程序下载地址http://www.graphviz.org/download/
+4）将constant.py文件中的'your gitee account token'换成使用者gitee账号对应的token(个人设置->私人令牌)
 
 
 
