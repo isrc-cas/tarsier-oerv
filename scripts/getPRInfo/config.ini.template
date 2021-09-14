@@ -2,4 +2,4 @@
 token=<add-your-token-here>
 url=https://gitee.com/api/v5/repos/openeuler/RISC-V/pulls/
 watchList=watchlist.txt
-dir=/home/lazy/python/
+dir=<add-your-script-path-here>
