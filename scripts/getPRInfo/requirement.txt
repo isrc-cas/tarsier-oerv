@@ -1,0 +1,4 @@
+configparser==5.0.2
+requests==2.26.0
+python-crontab==2.5.1 
+
