@@ -5,12 +5,13 @@ import datetime
 import time
 import pandas as pd
 import os
+import constant
 
-
+token = 'token {}'.format(constant.token)
 member_file = '../../members.md'
 headers = {
     'Accept': 'application/vnd.github.v3+json',
-    'Authorization': 'token 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'
+    'Authorization': token
     }
 issue_url = 'https://api.github.com/repos/plctlab/openEuler-riscv/issues'
 

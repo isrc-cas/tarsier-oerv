@@ -1,13 +1,14 @@
 import requests
 import json
 import os
+import constant
 
-
+token = constant.token
 headers = {
     'Content-Type': 'application/json;charset=UTF-8'
     }
 params = {
-    'access_token': '1ff56996299ca3abb99cdbc2043401de'
+    'access_token': token
 }
 
 specfilepath = os.path.join(os.getcwd(), 'specfile.json')
