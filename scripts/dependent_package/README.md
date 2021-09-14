@@ -38,6 +38,8 @@ packagelist.xlsx 第一个sheet内容是https://build.openeuler.org/project/moni
 
 3）运行前需要安装requirements.txt里python第三方库，执行pip install -r requirements.txt可一次性安装，另外由于依赖关系图是由graphviz生成的，所以还需要安装graphviz程序，graphviz安装程序下载地址http://www.graphviz.org/download/
 
+4）将constant.py文件中的'your gitee account token'换成使用者gitee账号对应的token(个人设置->私人令牌)
+
 
 
 
