@@ -33,7 +33,8 @@ def get_repoPRInfo(headers,token,url):
         # print ('PRInfo data', len(data))
         if len(data) > 0:
             for item in data:
-                PRInfo = [item['title'], item['url'], item['state']]
+                pr_url = item['url'].replace('gitee.com/api/v5/repos/', 'gitee.com/', 1)
+                PRInfo = [item['title'], pr_url, item['state']]
                 PRInfolist.append(PRInfo)
             i = i + 1
         else:
