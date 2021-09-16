@@ -1,4 +1,3 @@
-configparser
 requests
 python-crontab
 openpyxl
