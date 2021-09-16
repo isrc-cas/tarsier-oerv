@@ -1,6 +1,13 @@
 from crontab import CronTab
-cron=CronTab(user=True)
+import os
 
-job = cron.new("/usr/bin/python3.8 /home/lazy/python/getPRInfo.py >> /home/lazy/python/log.txt 2>&1 &")
+curDir=os.path.dirname(os.path.abspath(__file__))
+
+
+cron=CronTab(user=True)
+cmd="/usr/bin/python3.8 "+curDir+"/getPRInfo.py >> "+curDir+"/log.txt 2>&1 &"
+
+job = cron.new(cmd)
+
 job.setall("0 9 * * 3")
 cron.write()

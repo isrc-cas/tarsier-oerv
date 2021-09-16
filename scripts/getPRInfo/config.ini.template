@@ -1,5 +1,5 @@
 [default]
-token=<add-your-token-here>
-url=https://gitee.com/api/v5/repos/openeuler/RISC-V/pulls/
-watchList=watchlist.txt
-dir=<add-your-script-path-here>
+token=<put-your-token-here>
+orgs=openEuler-RISC-V
+repo=https://gitee.com/openeuler/RISC-V
+ignoreComment=openeuler-ci-bot,i-robot,openeuler-sync-bot
