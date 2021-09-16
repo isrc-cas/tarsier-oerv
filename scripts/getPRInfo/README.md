@@ -13,7 +13,7 @@ pip3 install -r requirements.txt
   修改完以后将 config.ini.template 重命名为 config.ini
   
   
-4. 可能需要修改 setCron.py 中 cmd 中的 python 路径
+4. 可能需要修改 setCron.py 中 cmd 中的 python 相关路径为你的python路径
   
 5. 运行 setCron.py, 然后可以看到当前生效的 job
 ```
