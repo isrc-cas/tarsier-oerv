@@ -49,11 +49,7 @@ def writeToExcle(filepath, datelist, title):
 
     wb = load_workbook(filepath)
     # sheetindex = len(wb.worksheets)
-    ws = wb.create_sheet(title, status)  #这里简单用status值代替sheetindex，偷个懒
-    ws.append(['packagename','status'])
-    ws.column_dimensions["A"].width = 20
-    ws.column_dimensions["B"].width = 20
-
+    ws = wb.worksheets[1]
     for itPkgname in datelist:
         ws.append([itPkgname, status])
 
@@ -75,6 +71,18 @@ if __name__=="__main__":
     obsfilepath = os.path.join(obsdatafolder, sheetName+'.xlsx')
 
     wb = Workbook()
+    ws = wb.create_sheet("obs-status", 0)
+    ws.column_dimensions["A"].width = 20
+    ws.column_dimensions["B"].width = 20
+    ws.append(['name', 'code'])
+    ws.append(['succeeded', 0])
+    ws.append(['unresolvable', 1])
+    ws.append(['failed', 2])
+
+    ws = wb.create_sheet("buildresults", 1)
+    ws.append(['packagename', 'status'])
+    ws.column_dimensions["A"].width = 20
+    ws.column_dimensions["B"].width = 20
     wb.save(obsfilepath)
 
     # 写入数据到excle
