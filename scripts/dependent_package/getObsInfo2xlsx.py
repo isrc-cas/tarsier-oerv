@@ -71,7 +71,7 @@ if __name__=="__main__":
     nowtime = time.strftime("%Y%m%d-%H%M", time.localtime())
     print(nowtime)
     sheetName = 'obsBuild-' + nowtime
-    obsdatafolder = os.getcwd().replace("scripts\dependent_package",'obsBuildStatus')
+    obsdatafolder = os.getcwd().replace("scripts\dependent_package",'data\obsBuildStatus')
     obsfilepath = os.path.join(obsdatafolder, sheetName+'.xlsx')
 
     wb = Workbook()
