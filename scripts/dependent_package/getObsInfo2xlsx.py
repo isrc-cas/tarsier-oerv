@@ -49,11 +49,11 @@ def writeToExcle(filepath, datelist, title):
 
     wb = load_workbook(filepath)
     # sheetindex = len(wb.worksheets)
-    ws = wb.worksheets[1]
+    ws = wb.worksheets[0]
     for itPkgname in datelist:
-        ws.append([itPkgname, status])
+        ws.append([itPkgname, status, title])
 
-    print(title + "  is done!  file path is ：" + filepath)
+    print(title + "  is done! ",len(datelist)," datas write into the file ：" + filepath)
     wb.save(filepath)
 
 
@@ -71,21 +71,22 @@ if __name__=="__main__":
     obsfilepath = os.path.join(obsdatafolder, sheetName+'.xlsx')
 
     wb = Workbook()
-    ws = wb.create_sheet("obs-status", 0)
-    ws.column_dimensions["A"].width = 20
-    ws.column_dimensions["B"].width = 20
-    ws.append(['name', 'code'])
-    ws.append(['succeeded', 0])
-    ws.append(['unresolvable', 1])
-    ws.append(['failed', 2])
+    # ws = wb.create_sheet("obs-status", 0)
+    # ws.column_dimensions["A"].width = 20
+    # ws.column_dimensions["B"].width = 20
+    # ws.append(['name', 'code'])
+    # ws.append(['succeeded', 0])
+    # ws.append(['unresolvable', 1])
+    # ws.append(['failed', 2])
 
-    ws = wb.create_sheet("buildresults", 1)
-    ws.append(['packagename', 'status'])
+    ws = wb.create_sheet("buildresults", 0)
+    ws.append(['packagename', 'statuscode', 'statusname'])
     ws.column_dimensions["A"].width = 20
     ws.column_dimensions["B"].width = 20
+    ws.column_dimensions["C"].width = 20
     wb.save(obsfilepath)
 
     # 写入数据到excle
     writeToExcle(obsfilepath, succeeded_packagelist, "succeeded")
     writeToExcle(obsfilepath, unresolvable_packagelist, "unresolvable")
-    writeToExcle(obsfilepath, succeeded_packagelist, "failed")
+    writeToExcle(obsfilepath, failed_packagelist, "failed")
