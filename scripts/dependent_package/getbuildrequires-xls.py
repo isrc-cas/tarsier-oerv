@@ -19,7 +19,9 @@ params = {
 }
 
 specfilepath = os.path.join(os.getcwd(), 'specfile.json')
-dependentsfilepath = os.path.join(os.getcwd(), 'dep_info.xlsx')
+
+obsdatafolder = os.getcwd().replace("scripts\dependent_package", 'data')
+dependentsfilepath = os.path.join(obsdatafolder, 'dep_info.xlsx')
 specContent = os.path.join(os.getcwd(), 'debugjson/speccontent.txt')
 
 def createSheet():
@@ -83,7 +85,6 @@ def get_buildrequires():
 
         # 调试用：将转码后的content写入debugjson/speccontent.json；便于分析数据结构
         # with open(specContent, 'w') as f:
-        #     # json.dump(spec_content, f)  #按照json格式写
         #     f.write(spec_content)
         #     f.close()
 
