@@ -1,0 +1,5 @@
+[default]
+token=<put-your-token-here>
+orgs=openEuler-RISC-V
+repo=https://gitee.com/openeuler/RISC-V
+ignoreComment=openeuler-ci-bot,i-robot,openeuler-sync-bot
