@@ -51,19 +51,8 @@
 
 ### 4.孙浩翔
 
-- [构建失败]【已解决】 python-jaraco-collections：[链接](https://github.com/plctlab/openEuler-riscv/issues/48)
+- 
 
-  相关PR：[链接](https://gitee.com/src-openeuler/python-jaraco-collections/pulls/2)
-
-  OBS相关Request：[链接](https://build.openeuler.org/request/show/346)
-
-- [构建失败]【已解决】python-mistune：[链接](https://gitee.com/openeuler/RISC-V/issues/I48GDD?from=project-issue)
-
-  OBS相关Request：[链接](https://build.openeuler.org/request/show/345)
-
-- 本地构建过程中遇到的问题：[链接](https://github.com/plctlab/openEuler-riscv/issues/107)
-
-- 笔记：[OBS中包的本地构建记录](https://gitee.com/maximsuen/plct-internship-notes/blob/master/6.OBS中包的本地构建记录.md)
 
 
 
