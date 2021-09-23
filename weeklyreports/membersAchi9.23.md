@@ -45,8 +45,18 @@
 
 ### 3.李诗洋
 
-- 
+- ck包：
+  - issue: https://gitee.com/openeuler/RISC-V/issues/I466NG?from=project-issue
+  - obs: [合并后构建成功](https://build.openeuler.org/package/live_build_log/openEuler:Mainline:RISC-V/ck/standard_riscv64/riscv64) 
+  - PR: https://gitee.com/openeuler-risc-v/ck/pulls/1
 
+- kexec-tools:
+  - issue: https://github.com/plctlab/openEuler-riscv/issues/142
+  - obs: [obs构建失败日志](https://build.openeuler.org/package/live_build_log/openEuler:Mainline:RISC-V/kexec-tools/standard_riscv64/riscv64)
+         [个人工程下修改构建成功日志](https://build.openeuler.org/package/live_build_log/home:LiShiYang:branches:openEuler:Mainline:RISC-V/kexec-tools/standard_riscv64/riscv64)
+
+- httpd:
+  - issue: https://github.com/plctlab/openEuler-riscv/issues/143
 
 
 ### 4.孙浩翔
