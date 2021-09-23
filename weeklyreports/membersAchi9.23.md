@@ -1,0 +1,125 @@
+# 成员交付成果清单
+
+请大家参考如下信息要素提交可见交付成果：（没有的可不列出）
+
+构建包任务类：
+
+- XXXX包：
+  - issue：
+  - obs：
+  - PR：
+  - 文档：
+
+其它任务：
+
+- issue标题：
+  - issue链接：
+  - PR：
+  - 文档：
+
+笔记类（这里特指自己学习、工作中总结的文档，不是以issue方式指定的任务）：
+
+- 文档标题、链接
+
+问题类（工作中发现和遇到的问题，必须以公开的方式可见才行，非可见不算可见交付）
+
+- issue标题和链接
+
+
+
+### 0.马驰
+
+- 
+
+## 第一批
+
+### 1.孙喆炘 [zhé xīn]
+
+- 
+
+### 2.刘佳伟
+
+- 
+
+
+
+### 3.李诗洋
+
+- 
+
+
+
+### 4.孙浩翔
+
+- [构建失败]【已解决】 python-jaraco-collections：[链接](https://github.com/plctlab/openEuler-riscv/issues/48)
+
+  相关PR：[链接](https://gitee.com/src-openeuler/python-jaraco-collections/pulls/2)
+
+  OBS相关Request：[链接](https://build.openeuler.org/request/show/346)
+
+- [构建失败]【已解决】python-mistune：[链接](https://gitee.com/openeuler/RISC-V/issues/I48GDD?from=project-issue)
+
+  OBS相关Request：[链接](https://build.openeuler.org/request/show/345)
+
+- 本地构建过程中遇到的问题：[链接](https://github.com/plctlab/openEuler-riscv/issues/107)
+
+- 笔记：[OBS中包的本地构建记录](https://gitee.com/maximsuen/plct-internship-notes/blob/master/6.OBS中包的本地构建记录.md)
+
+
+
+## 第二批
+
+### 5.许志凌
+
+- 
+
+
+
+### 6.邹通成
+
+- 
+
+
+
+### 7.许嘉玲
+
+- 
+
+
+
+### 8.颛孙宇翔 [zhuān sūn]
+
+- 
+
+
+
+## 第三批
+
+### 9.高世豪
+
+- 
+
+
+
+### 10.袁政
+
+- 
+
+
+
+### 11.刘洋
+
+- 
+- 
+
+### 12.温智翔
+
+- 
+
+
+
+### 13.杨心仪
+
+- 
+
+
