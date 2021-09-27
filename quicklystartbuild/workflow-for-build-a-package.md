@@ -39,3 +39,19 @@ https://docs.qq.com/sheet/DUHFlV0haT2duWHBG?tab=BB08J2
 
 请大家执行以上的流程，并对自己跟踪的包的状态在上述表格中进行维护。
 
+
+
+
+
+## 问题
+
+### 什么时候openeuler-risc-v向src-openeuler提交PR？
+
+当OBS的openEuler:Mainline:RISC-V 工程完成了我们的构建目标，目标包都能反复构建成功（或者通过内部初测），达到发版状况的时候才会提交PR到上游。因此日常的工作流程中，不涉及到openeuler-risc-v向src-openeuler提交PR的过程。
+
+这个操作将由riscv社区的管理员或者maintainer负责。
+
+
+
+src-openeuler合并openeuler-risc-v的PR后，会由openeuler上游社区统一进行系统构建，测试，发布一个增加了支持riscv64的新操作系统版本。
+
