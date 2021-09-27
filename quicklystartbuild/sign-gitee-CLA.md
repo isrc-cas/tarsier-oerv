@@ -16,11 +16,11 @@
 
 ## 怎么签署openeuler开源社区的CLA
 
-**链接：**https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=
+**链接：**  https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZvcGVuZXVsZXI=
 
-**签署过程：**详见上述网页流程说明，这里不多说
+**签署过程：**  详见上述网页流程说明，这里不多说
 
-**说明：**作为员工（个人）常见的有两种身份，一个是以企业雇员注册Employee，一个是个人身份注册（不带组织身份的自由人）Individual，下面分别说明下两种身份的操作流程。
+**说明：**  作为员工（个人）常见的有两种身份，一个是以企业雇员注册Employee，一个是个人身份注册（不带组织身份的自由人）Individual，下面分别说明下两种身份的操作流程。
 
 
 
