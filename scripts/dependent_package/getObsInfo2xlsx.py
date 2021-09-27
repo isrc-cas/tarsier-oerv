@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*-coding:utf-8-*-
+
 import requests
 import json
 import re
@@ -22,7 +25,7 @@ def get_packagelist(url):
 
     return data_packagenames
 
-# 定义状态对应的编号（用于excle数据分析和sheetindex）
+# 定义状态对应的编号（用于excel数据分析和sheetindex）
 def getCode(status):
     code = 6
     if status == 'succeeded':
@@ -37,17 +40,38 @@ def getCode(status):
         code = 4
     if status == 'excluded':
         code = 5
+    if status == 'blocked':
+        code = 6
+    if status == 'scheduled':
+        code = 7
+    if status == 'building':
+        code = 8
 
     return code
 
-def writeToExcle(filepath, datelist, dt, title):
+# 如果文件obsBuild不存在则新建一个
+def createSheetFileTotal(filepath):
+    try:
+        wb = load_workbook(obsTotalNumfilepath)
+        ws = wb['buildresultsTotal']
+    except FileNotFoundError:
+        wb = Workbook()
+        ws = wb.create_sheet("buildresultsTotal", 0)  #记录统计信息
+        ws.append(['datetime',"succeeded","failed","unresolvable","broken","disabled","excluded","blocked","scheduled","building"])
+        wb.save(filepath)
+
+# 按照构建时间新建一个表记录构建详细记录和状态
+def createSheetFileDetial(filepath, nowtime):
+    wb = Workbook()
+    ws = wb.create_sheet(nowtime, 0)  # 按日期记录详细构建信息
+    ws.append(['packagename', 'statuscode', 'statusname'])
+    ws.column_dimensions["A"].width = 20
+    ws.column_dimensions["B"].width = 20
+    ws.column_dimensions["C"].width = 20
+    wb.save(filepath)
+
+def writeDetialToExcle(filepath, datelist, dt, title):
     wb = load_workbook(filepath)
-
-    # 记录统计数据
-    wst = wb.worksheets[0]
-    wst.append([dt, title, len(datelist)])
-
-    # 记录详细数据
     ws = wb[dt]
     for itPkgname in datelist:
         ws.append([itPkgname, getCode(title), title])
@@ -55,42 +79,36 @@ def writeToExcle(filepath, datelist, dt, title):
     print(title + ": ",len(datelist))
     wb.save(filepath)
 
+def writeTotalToExcle(filepath, data):
+    wb = load_workbook(filepath)
+    ws = wb['buildresultsTotal']
+    ws.append(data)
+    wb.save(filepath)
+
 
 
 if __name__=="__main__":
-    # 根据日期新建excle，并写入数据。用于归档和数据分析用
+    # 根据日期新建excel，并写入数据。用于归档和数据分析用
     nowtime = time.strftime("%Y%m%d-%H%M", time.localtime())
     print(nowtime)
-    sheetName = 'obsBuild'
+
     obsdatafolder = os.getcwd().replace("scripts\dependent_package",'data\obsBuildStatus')
-    obsfilepath = os.path.join(obsdatafolder, sheetName+'.xlsx')
+    obsTotalNumfilepath = os.path.join(obsdatafolder, 'obsBuild.xlsx')
+    obsDetialfilepath = os.path.join(obsdatafolder, 'obsBuild-'+nowtime+'.xlsx')
 
-    try:
-        wb = load_workbook(obsfilepath)
-        ws = wb['buildresultsTotal']
-    except FileNotFoundError:
-        wb = Workbook()
-        wst = wb.create_sheet("buildresultsTotal", 0)  #记录统计信息
-        wst.append(['datetime','statusname','totalnum'])
-        wst.column_dimensions["A"].width = 20
-        wst.column_dimensions["B"].width = 20
-        wst.column_dimensions["C"].width = 20
+    createSheetFileTotal(obsTotalNumfilepath)
+    createSheetFileDetial(obsDetialfilepath, nowtime)
 
-    sheetindex = len(wb.worksheets)
-    ws = wb.create_sheet(nowtime, sheetindex)  #按日期记录详细构建信息
-    ws.append(['packagename', 'statuscode', 'statusname'])
-    ws.column_dimensions["A"].width = 20
-    ws.column_dimensions["B"].width = 20
-    ws.column_dimensions["C"].width = 20
-
-    wb.save(obsfilepath)
-
-    # # 获取各状态下的packagesname并写入数据到excle
-    queryDate = ["succeeded","failed","unresolvable","broken","disabled","excluded"]
+    totalNum = [nowtime]
+    # 获取各状态下的packagesname并写入数据到excle
+    queryDate = ["succeeded","failed","unresolvable","broken","disabled","excluded","blocked","scheduled","building"]
     for qd in queryDate:
         url = base_url+"&"+qd+"=1"
         # print(qd,"url=",url)
         packagelist = get_packagelist(url)
-        writeToExcle(obsfilepath, packagelist, nowtime, qd)
+        writeDetialToExcle(obsDetialfilepath, packagelist, nowtime, qd)
+        totalNum.append(len(packagelist))
 
-    print('All datas in file ：', obsfilepath)
+    writeTotalToExcle(obsTotalNumfilepath, totalNum)
+
+    print('All datas in file ：', obsDetialfilepath)
