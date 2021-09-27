@@ -45,13 +45,43 @@
 
 ### 3.李诗洋
 
-- 
+- ck包：
+  - issue: https://gitee.com/openeuler/RISC-V/issues/I466NG?from=project-issue
+  - obs: [合并后构建成功](https://build.openeuler.org/package/live_build_log/openEuler:Mainline:RISC-V/ck/standard_riscv64/riscv64) 
+  - PR: https://gitee.com/openeuler-risc-v/ck/pulls/1
 
+- kexec-tools:
+  - issue: https://github.com/plctlab/openEuler-riscv/issues/142
+  - obs: [obs构建失败日志](https://build.openeuler.org/package/live_build_log/openEuler:Mainline:RISC-V/kexec-tools/standard_riscv64/riscv64)
+         [个人工程下修改构建成功日志](https://build.openeuler.org/package/live_build_log/home:LiShiYang:branches:openEuler:Mainline:RISC-V/kexec-tools/standard_riscv64/riscv64)
+
+- httpd:
+  - issue: https://github.com/plctlab/openEuler-riscv/issues/143
 
 
 ### 4.孙浩翔
 
-- 
+**构建包任务类：**
+
+- [OBS中valgrind相关依赖的处理](https://github.com/plctlab/openEuler-riscv/issues/129)
+
+- jq：
+  - issue：[链接](https://github.com/plctlab/openEuler-riscv/issues/136)
+  - obs：[链接](https://build.openeuler.org/package/show/home:maxim.suen:branches:openEuler:Mainline:RISC-V/jq)
+  - PR：[链接](https://gitee.com/openeuler-risc-v/jq/pulls/2)
+- libdap:
+  - issue：[链接](https://github.com/plctlab/openEuler-riscv/issues/140)
+  - obs：[链接](https://build.openeuler.org/package/show/home:maxim.suen:branches:openEuler:Mainline:RISC-V/libdap)
+  - PR（待合并）：[链接](https://gitee.com/openeuler-risc-v/libdap/pulls/1)
+
+- fwupd、libsecret:
+  - issue:[链接](https://github.com/plctlab/openEuler-riscv/issues/144)
+- pytest:
+  - issue:[链接](https://github.com/plctlab/openEuler-riscv/issues/107)
+
+**笔记类**
+
+- [smp32版镜像的使用](https://gitee.com/maximsuen/plct-internship-notes/blob/master/7.SMP32%E7%89%88OE%E5%92%8C%E7%9B%B8%E5%BA%94QEMU%E7%9A%84%E4%BD%BF%E7%94%A8.md)
 
 
 
