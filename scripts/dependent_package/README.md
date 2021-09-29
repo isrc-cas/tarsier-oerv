@@ -9,6 +9,7 @@ getspec.py  执行该文件可获取openEuler-riscv的所有包的spec，获取�
 specfile.json  存放openEuler-riscv的所有包的spec信息
 
 getbuildrequires.py 执行改文件可根据spec文件获取所有包的依赖包，获得的依赖包存放在buildrequiresfile.json中
+getbuildrequires-xls.py将包以及其依赖关系写入到../../data/dep_info.xlsx中
 
 buildrequiresfile.json 存放所有包的依赖包的信息
 
@@ -40,6 +41,14 @@ packagelist.xlsx 第一个sheet内容是https://build.openeuler.org/project/moni
 
 4）将constant.py文件中的'your gitee account token'换成使用者gitee账号对应的token(个人设置->私人令牌)
 
+
+##### data/compare下的表格生成
+1. 当obs上的包总数发生变化、依赖关系发生变化：
+    1）getspec.py
+    2）getbuildrequires-xls.py
+2. 当obs构建状态发生变化：
+    3）getObsInfo2xlsx.py
+3. compare下的表格，基于obs数据和依赖数据在excle中整理和统计
 
 
 
