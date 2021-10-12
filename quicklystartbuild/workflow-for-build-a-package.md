@@ -28,6 +28,16 @@
 
 ![3-正式流程](images/3-%E6%AD%A3%E5%BC%8F%E6%B5%81%E7%A8%8B.png)
 
+注意：
+
+在obs上提交的submit的时候，  _service文件中的url不能是【个人gitee仓库】的地址，在向mainline提交submit之前，请将url修改为源码仓（也就是openeuler-risc-v）这个地址后再提交。
+
+因为mainline默认只接受源码仓过来的源代码进行构建，这是流程和规范约束的。
+
+在个人的obs上测试成功之后，咱们需要：
+1. 先在gitee上提交PR到openeuler-risc-v源码仓
+2. 待openeuler-risc-v源码仓合并PR之后，将个人obs的_service文件的url修改为：openeuler-risc-v  然后再提交submit package。这样mainline构建的时候才会取源码仓的地址，保证我们mainline的源码都是来自源码仓，方便我们基于openeuler-risc-v源码仓管理所有包的源码（这是管理所需要而设定的约束）。
+
 
 
 ## 包构建进度跟踪
