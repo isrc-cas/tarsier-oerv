@@ -12,7 +12,6 @@
 | 刘佳伟                 | 在职实习生 | LV2        | liujiawei     | liujiawei929        |      |
 | 孙喆炘  [zhé xīn]      | 在职实习生 | LV2        | zxs-un      | zxs-un              |      |
 | 李诗洋                 | 在职实习生 | LV1 | lishiyangasdf | asdf1113            |      |
-| 孙浩翔                 | 在职实习生 | LV1 | maximsuen     | MaximSuen           |      |
 | 许志凌                 | 在职实习生 | LV1 | xinminst  | xinminst            |      |
 | 邹通成                 | 在职实习生 | LV1 | zou-tongcheng | Wenxiang233         |      |
 | 许嘉玲                 | 在职实习生 | LV1 | xujialing | glutinous-rice-wine |      |
