@@ -4,4 +4,10 @@
 | ---------------------- | ---------- | ---------- | ------------- | ------------------- | ---- |
 | 李心仪                 | 志愿者     |  | KaylaLi       |                     |      |
 | 杜顺利                 | 离职       |  | dushunli      |                     |      |
+| 颛孙宇翔   [zhuān sūn] | 志愿者 | LV1 | ZhuansunYuxiang | YuXiang-ZhuanSun    |      |
+| 高世豪                 | 志愿者 | LV1 | ShihaoGao     | ShiHaoGao           |    |
+| 袁政                   |志愿者  | LV1 | YuanZheng612  | YuanZheng612        |     |
+| 刘洋                 | 志愿者 | LV1 | LiuY328     | LiuYang328           |    |
+| 温智翔                 |志愿者  | LV1 | WenZhixiang   | WenZhixiang      |     |
+| 杨心仪                 | 志愿者 | LV1 | yxychristina     | yxycrhistina           |    |
 
