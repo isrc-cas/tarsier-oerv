@@ -22,4 +22,4 @@
 | 刘洋                 | 在职实习生 | LV1 | LiuY328     | LiuYang328           |    |
 | 温智翔                 |在职实习生  | LV1 | WenZhixiang   | WenZhixiang      |     |
 | 杨心仪                 | 在职实习生 | LV1 | yxychristina     | yxycrhistina           |    |
-
+| 陈泽睿                  | 在职实习生 |LV1 | chenzerui23    | Chenzerui23   |   |
