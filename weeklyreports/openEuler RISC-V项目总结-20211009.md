@@ -19,6 +19,9 @@
 | 20210926 | 2206      | 266    | 1576         | 16     | 1        | 62       |
 | 20210930 | 2309      | 170    | 1570         | 16     | 1        | 61       |
 | 20211009 | 2312      | 168    | 1569         | 16     | 1        | 61       |
+| 20211020 | 2321      | 166    | 1562         | 16     | 1        | 61       |
+
+
 
 （1）openEuler:Mainline:RISC-V  failed状态的包逐一进行修复，使之能够succeeded 
 
@@ -65,7 +68,7 @@
 > 这是一个从0开始构建openEuler RISC-V 能够自举的最小集合操作系统的分支任务。目前基于openEuler:Mainline:RISC-V 4127个软件包的构建都是基于种子二进制依赖仓库，这种在未实现操作系统自举的时候就加入了太多的软件包，依赖仓也加入了很多二进制包，这样做会出现依赖仓的软件包变化时，某一些软件包的构建结果不稳定总是能够成功，因此启动了一个从0开始，分批次逐步加入软件包，在上一批次软件包能够自举后再加入新的软件包的构建方式去完成操作系统构建。
 
 - stage1:23个包全部构建成功：https://build.openeuler.org/project/monitor/home:zxs-un:openEuler:riscv64:BaseOS:stage1
-- Stage2: 82个包 65个成功：https://build.openeuler.org/project/monitor/home:zxs-un:openEuler:riscv64:BaseOS:stage2
+- Stage2: 82个包 66个成功：https://build.openeuler.org/project/monitor/home:zxs-un:openEuler:riscv64:BaseOS:stage2
 
 
 
@@ -80,13 +83,9 @@
 （1）D1+openEuler镜像制作
 
 - [完成] D1+openEuler：D1 openEuler 第一版镜像下载地址：https://mirror.iscas.ac.cn/plct/openEuler-D1-20210731.img.bz2
-
 - [完成] D1+openEuler：D1 openEuler 第二版镜像(wifi可用)下载地址：https://mirror.iscas.ac.cn/plct/openEuler-D1-wifi-enabled-20210810.img.bz2
-
 - [完成] D1+openEuler：D1 openEuler 第三版镜像(HDMI接口可用)下载地址：https://mirror.iscas.ac.cn/plct/openEuler-D1-wifi-hdmi-20210817.img.bz2
-
 - [完成] D1+openEuler：D1 openEuler 第四版镜像(增加docker)下载地址：https://mirror.iscas.ac.cn/plct/openEuler-D1-wifi-hdmi-docker-20210826.img.bz2
-
 - [完成] D1+openEuler：D1 openEuler 第五版镜像(增加xfce+bishengJDK)下载地址：（暂时未公开到plct mirror，计划解决一些问题后再更新）
 
 （2）测试工作

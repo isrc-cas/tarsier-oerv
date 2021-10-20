@@ -104,3 +104,4 @@ obs在线构建与本地osc构建应用场景
 3、D1上安装openEuler riscv：@wangxiang
 
 4、通过添加tag等方式提升obs的构建效率？ @wuwei
+
