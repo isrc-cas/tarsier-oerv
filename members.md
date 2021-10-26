@@ -16,4 +16,4 @@
 | 邹通成                 | 在职实习生 | LV1 | zou-tongcheng | Wenxiang233         |      |
 | 许嘉玲                 | 在职实习生 | LV1 | xujialing | glutinous-rice-wine |      |
 | 陈泽睿                  | 在职实习生 |LV1 | chenzerui23    | Chenzerui23   |   |
-
+| 冯宇                   | 在职实习生 | LV1 | fengyu | 1isfirst   |
