@@ -29,6 +29,26 @@
 
 ### 马驰
 
+构建包任务类：
+
+- bazel包：
+  - issue：https://github.com/plctlab/openEuler-riscv/issues/166
+  - obs：https://build.openeuler.org/package/show/home:mc:branches:openEuler:Mainline:RISC-V/bazel
+  - PR：
+  - 文档：
+  
+- openmpi包：
+  - issue：https://github.com/plctlab/openEuler-riscv/issues/150
+  - obs：https://build.openeuler.org/package/show/home:mc:branches:openEuler:Mainline:RISC-V/openmpi
+  - PR：
+  - 文档：
+
+其它任务：
+
+- issue标题：完成osc本地构建的文档
+  - issue链接：https://github.com/plctlab/openEuler-riscv/issues/83
+  - PR：
+  - 文档：
 
 
 
