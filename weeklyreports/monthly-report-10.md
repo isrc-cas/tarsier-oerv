@@ -63,7 +63,21 @@
 
 ### 李诗洋
 
+构建包任务类：
 
+- kexec-tools:
+  - issue: https://github.com/plctlab/openEuler-riscv/issues/142
+  - obs: [obs构建失败日志](https://build.openeuler.org/package/live_build_log/openEuler:Mainline:RISC-V/kexec-tools/standard_riscv64/riscv64) [个人工程下修改构建成功日志](https://build.openeuler.org/package/live_build_log/home:LiShiYang:branches:openEuler:Mainline:RISC-V/kexec-tools/standard_riscv64/riscv64)
+
+- httpd:
+  - issue: https://github.com/plctlab/openEuler-riscv/issues/143
+
+笔记类：
+- [实习总结](https://gitee.com/lishiyangasdf/open-euler-r-v-learning-notes/blob/master/2021.08-2021.10%E6%80%BB%E7%BB%93.md)
+
+
+问题类
+- [[构建失败] 原因分析包括：subversion、kata-containers、golang、libvpx、php-cli、libtcnative、openjdk-1.8.0、openwsman](https://github.com/plctlab/openEuler-riscv/issues/183)
 
 
 ### 孙浩翔
