@@ -26,7 +26,9 @@
 
   >  OBS构建工程中所有软件包的源码来之源码仓
 
+- openEuler riscv源码仓：https://gitee.com/openeuler-risc-v
 
+  > openEuler riscv源码仓是为了加速riscv pull request审核流程而设置的一个中间仓库，用于维护在openeuler riscv构建环境下需要维护的源码包。（需要修改的才放这里，不需要修改的依然使用src-openeuler源码仓的源码）
 
 - [gitee上openEuler RISC-V SIG 管理的仓库](https://gitee.com/openeuler/RISC-V) : https://gitee.com/openeuler/RISC-V 
 
