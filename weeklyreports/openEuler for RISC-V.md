@@ -10,17 +10,17 @@
 
    > 需要确定下：mainline:RISC-V到底是滚动更新的riscv master、还是历史的某一个版本？目前mainline:RISC-V在维护过程中，有些包的版本未更新过，有的更新了，已经无法与上游【系统某版本】对应上。软件包版本问题可能是导致滚动自构建失败的原因。
    >
-   > 
+   >
    >
    > 如果是master的话，要怎么去维护master？
    >
-   > 
+   >
 
    （2）openEuler 22.03:LTS 分支：固定版本
 
    > 为openeuler 22.03发布而生成的版本
 
-   
+
 
 2. obs构建工程管理
 
@@ -29,7 +29,7 @@
    | master    | [openEuler:Mainline:RISC-V](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V) | [openEuler:Mainline](https://build.openeuler.org/project/show/openEuler:Mainline) |
    | 22.03:LTS | openEuler:22.03:LTS:Next:RISC-V    (待建)                    | [openEuler:22.03:LTS:Next](https://build.openeuler.org/project/show/openEuler:22.03:LTS:Next) |
 
-   
+
 
 3. 源码管理
 
@@ -51,7 +51,7 @@
    1. 默认：src-openeuler
    2. 构建失败的包：原始和最终的源码都是src-openeuler，但是在全obs工程未达成构建目标之前，修改的代码临时放openeuler-risc-v
 
-   
+
 
    - 关于分支
      - 对应上述仓库管理关系，根据不同的分支工程，建立对应的源码分支，不同工程下的源码在其对应的分支上进行管理和提交、合入；（openeuler riscv下的master分支和22.03:LTS:Next分支都是来自于上游x86和arm的同版本工程；本身并无直接的关系）
@@ -83,7 +83,7 @@
 
   - 语言包：java、python、go、ruby、perl、rust、scala...
 
-    
+
 
 - 计划：结合openeuler上游22.03LTS Release计划，oe-rv 22.03LTS计划：
 
@@ -96,7 +96,7 @@
   | 拉版本分支22.03 LTS                             |            | 2022/2/7   |
   | Alpha自验证                                     | 2022/2/7   | 2022/2/11  |
 
-  
+
 
 - 版本基线：（riscv原则上保持一致）
 
@@ -132,7 +132,7 @@
       - 种子1：通过openeuler代码构建出来的rpm包：应该是自洽的
       - 用种子1进行滚动构建
 
-   
+
 
    操作步骤：
 
@@ -147,7 +147,7 @@
       > - Stage3: 139个包 104个成功
       >   - https://build.openeuler.org/project/show/home:zxs-un:openEuler:riscv64:21.09:stage3
       >
-      > 
+      >
       >
       > 不放心版本差异的，这里也有之前临时验证有的基于openEuler:22.03:LTS:Next branch出的部分包可做种子：
       >
@@ -189,7 +189,7 @@
 
 2. master工程的修复，源码修改提交到master；针对22.03:LTS:Next所做的源码修改，源码提交到22.03:LTS:Next分支；
 
-   
+
 
 ### 3.4 计划
 
@@ -210,4 +210,3 @@
    （2）对比minios的450+个包
 
 3. 开始针对构建失败的包修复
-
