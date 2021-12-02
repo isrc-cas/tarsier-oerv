@@ -1,6 +1,8 @@
 # openEuler for RISCV
 
-## 维护中的分支
+
+
+## 1. 维护中的分支（现状描述）
 
 1. openEuler RISC-V根据当前的情况，维护以下2个版本：
 
@@ -59,7 +61,9 @@
 
 
 
-## [openEuler:Mainline:RISC-V](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V)
+
+
+## 2. [openEuler:Mainline:RISC-V](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V)
 
 版本确定定位问题，是否进行持续维护？怎么维护？
 
@@ -67,7 +71,9 @@
 
 
 
-## openEuler:22.03:LTS:Next:RISC-V 
+## 3. 22.03LTS版本（openEuler:22.03:LTS:Next:RISC-V ）
+
+### 3.1 现状
 
 - 需求：从LTS版本主打长期维护+稳定性的考虑，22.03 oe-rv的功能以系统基础为主，在功能上初步讨论支持：
 
@@ -75,7 +81,7 @@
 
   - 容器：docker、isula
 
-  - 语言包：java、python、
+  - 语言包：java、python、go、ruby、perl、rust、scala...
 
     
 
@@ -105,9 +111,9 @@
 
 
 
-### 建设方案
+### 3.2 建设方案（todo）
 
-#### 构建工程：
+#### 3.2.1 构建工程：
 
 1. 建obs工程：
 
@@ -159,7 +165,7 @@
 
 
 
-#### 种子仓库：
+#### 3.2.2 种子仓库：
 
 - 通过obs工程进行管理：
 
@@ -177,11 +183,31 @@
 
 
 
-#### 源码仓：
+#### 3.2.3 源码仓：
 
 1. 为openeuler-risc-v源码仓的源码建立openEuler:22.03:LTS:Next 分支；
 
 2. master工程的修复，源码修改提交到master；针对22.03:LTS:Next所做的源码修改，源码提交到22.03:LTS:Next分支；
 
    
+
+### 3.4 计划
+
+一周内：
+
+1. obs工程建立
+2. 种子仓库
+3. 生成种子1
+
+两周内：
+
+1. 基于种子1,openEuler:22.03:LTS:Next:RISC-V 4167个包构建状态验证；——》这样才能了解现状，知道哪些包有问题需要修复
+
+2. 基于结果，从以下两个角度分析包构建情况，整理修复优先级：
+
+   （1）依赖关系底层的包
+
+   （2）对比minios的450+个包
+
+3. 开始针对构建失败的包修复
 
