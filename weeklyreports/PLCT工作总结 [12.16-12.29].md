@@ -70,8 +70,8 @@
      - [ sscg](https://gitee.com/openeuler-risc-v/sscg/pulls/2)
      - [mariadb](https://gitee.com/openeuler-risc-v/mariadb/pulls/3)
      - [libkcapi](https://gitee.com/openeuler-risc-v/libkcapi/pulls/2)
-   - 正在进行的：
-     - 
+     
+     
 
    
 
@@ -108,21 +108,26 @@
 1. 22.03摸底工程：
    - 构建速度未达到预期。目前估计还需要一周才能完成一遍构建。
    - 22.03构建效果对照mainline:RISC-V也不是很可观。还有1000多个未构建完的情况下，构建失败数量当前已经接近400个；
-2. 语言包升级：目前的重点和难点，已经在开展中：
+2. 语言包升级和修复：目前的重点和难点，已经在开展中：
    - Java
-   - python
-   - perl
+     - **java1.8**
+   - python：升级
+   - perl：升级
    - golang：引擎成功，部分依赖未成功
+     - 1.17成功 @xuzhou
    - nodejs：编译成功，打包失败
    - php
+     - 成功 @晓倩
    - rust
    - ruby
-   - ocaml
+   - **ocaml**
    - erlang
 3. 门禁：未开始
 4. 镜像工具：是否还需要做什么？
 
+​      仓库：qemu工具
 
+​	
 
 ## 计划
 
