@@ -17,3 +17,4 @@
 | 许嘉玲                 | 在职实习生 | LV1 | xujialing | glutinous-rice-wine |      |
 | 陈泽睿                  | 在职实习生 |LV1 | chenzerui23    | Chenzerui23   |   |
 | 冯宇                   | 在职实习生 | LV1 | fengyu | 1isfirst   |
+| 金钜涵                 | 在职实习生 | LV1 | jinjuhan | BigBrotherJu |
