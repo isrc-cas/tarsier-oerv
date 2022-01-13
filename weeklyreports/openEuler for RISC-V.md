@@ -1,6 +1,16 @@
 # openEuler for RISCV
 
+TL;DR: 会议上来自 wuwei 的一些观点
 
+- 从12月开始应该有几个长期维护的工程（分支）：oE/mainline、oE/2203、oE/2003（或oE/2109），主线分支保持某种形式的CI检测在riscv64上的regression；2203是为下一个版本；2003或2109是为了目前在 RISC-V Lab 等软件所维护的系统中的支持。
+- 三个分支（工程）都需要各自从 oE 的统一工程中 branchout/fork。带有 RISC-V 后缀的工程不应该再被 branchout 出来（否则会导致代码源分裂）。
+- 三个工程的软件版本等不同，之间的代码关系，既有从 oE/mainline/RISCV 上 backport 到 2203 的情况，也有 2203 单独打特定 patch 的情况。需要根据具体情况来 review。
+- 三个工程理论上构建环境（rootfs+种子仓库）可以不一样，或必然不一样（Kernel headers、GCC 和 GLIBC 版本不同）。我们需要开始考虑每个工程（分支）的构建环境的维护。
+- 目前的 oE/mainline/RISCV 工程，名字已经不能体现工程的实际情况：截止到11月30日的 oE/mainline/RISCV 分支应该是从 2109 之后的某个 commit 分出来，已经没有百分百跟 mianline 对应：工程的代码仓库来源是 src-openeuler 和 openeuler-riscv 目录下的混合，同时还包含了若干个个人账号下的 repos。 **这在后续需要改变下，将截止到11月30日的 oE/mainline/RISCV 改个名字去掉mainline的字样。（具体操作可以复制一份再改名）
+- 不应该有 selfBuild0、1、2 的细分，是不必要的。概念上只需要区分3类包/环境：第0类是用非oE仓库构建出来的rpm包（偷包）组装出来的 rootfs + yum repo，去构建oE仓库中基本的rpm，得到 baseOS0；第1类是用得到的 baseOS， oE代码仓库中各种软件固定好一个基线版本，用 baseOS0 重新构建 baseOS1。第2类是用 baseOS1 构建所有 oE/RV 上的 4000+ 包。注意 baseOS1 和对应的 yum repo 软件可以（应该）是稳定不变的，它对应了（例如）2203版本的第一次正式发布的 rpm 集合。这个 baseline 可以持续构建所有（例如）2203 分支上的软件更新（不然的话就用户运行 yum update 或者 yum install 的时候可能会遇到 dependance conflicts）
+- 在2021年12月1日之前的各类决策在当时是合理的，有限人力下只能够维护一个分支；而由于构建系统的速度限制，必须脱离跟 oE/mainline 代码自动更新和OBS构建自动更新（因为更新频度导致的构建所需时间超过了构建系统能力）。而这两条前提都后续都会改变，我们应当开始考虑三个分支维护和逐步跟arm64/x86同一套代码仓库。
+- 在2203正式发布之后可以暂停掉2003或2109工程（分支），只维护 mainline 和 2203 两个工程。 2003/2109 工程可以在 2022 年 6 月左右停止更新。
+- 以上立项情况发生的前提有三： 第一，OBS构建系统速度足够在24小时内构建4000+个包； 第二，建立被动式的CI检测新代码提交在 RISC-V 平台上的 regression 并及时报警（目前还不太可能作为门禁）； 第三， 有足够的人力和足够经验的工程师即使修复。让我们在12月份先把1和3做到足够好。
 
 ## 1. 维护中的分支（现状描述）
 
@@ -10,17 +20,17 @@
 
    > 需要确定下：mainline:RISC-V到底是滚动更新的riscv master、还是历史的某一个版本？目前mainline:RISC-V在维护过程中，有些包的版本未更新过，有的更新了，已经无法与上游【系统某版本】对应上。软件包版本问题可能是导致滚动自构建失败的原因。
    >
-   > 
+   >
    >
    > 如果是master的话，要怎么去维护master？
    >
-   > 
+   >
 
    （2）openEuler 22.03:LTS 分支：固定版本
 
    > 为openeuler 22.03发布而生成的版本
 
-   
+
 
 2. obs构建工程管理
 
@@ -29,7 +39,7 @@
    | master    | [openEuler:Mainline:RISC-V](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V) | [openEuler:Mainline](https://build.openeuler.org/project/show/openEuler:Mainline) |
    | 22.03:LTS | openEuler:22.03:LTS:Next:RISC-V    (待建)                    | [openEuler:22.03:LTS:Next](https://build.openeuler.org/project/show/openEuler:22.03:LTS:Next) |
 
-   
+
 
 3. 源码管理
 
@@ -51,7 +61,7 @@
    1. 默认：src-openeuler
    2. 构建失败的包：原始和最终的源码都是src-openeuler，但是在全obs工程未达成构建目标之前，修改的代码临时放openeuler-risc-v
 
-   
+
 
    - 关于分支
      - 对应上述仓库管理关系，根据不同的分支工程，建立对应的源码分支，不同工程下的源码在其对应的分支上进行管理和提交、合入；（openeuler riscv下的master分支和22.03:LTS:Next分支都是来自于上游x86和arm的同版本工程；本身并无直接的关系）
@@ -83,7 +93,7 @@
 
   - 语言包：java、python、go、ruby、perl、rust、scala...
 
-    
+
 
 - 计划：结合openeuler上游22.03LTS Release计划，oe-rv 22.03LTS计划：
 
@@ -96,7 +106,7 @@
   | 拉版本分支22.03 LTS                             |            | 2022/2/7   |
   | Alpha自验证                                     | 2022/2/7   | 2022/2/11  |
 
-  
+
 
 - 版本基线：（riscv原则上保持一致）
 
@@ -132,7 +142,7 @@
       - 种子1：通过openeuler代码构建出来的rpm包：应该是自洽的
       - 用种子1进行滚动构建
 
-   
+
 
    操作步骤：
 
@@ -147,7 +157,7 @@
       > - Stage3: 139个包 104个成功
       >   - https://build.openeuler.org/project/show/home:zxs-un:openEuler:riscv64:21.09:stage3
       >
-      > 
+      >
       >
       > 不放心版本差异的，这里也有之前临时验证有的基于openEuler:22.03:LTS:Next branch出的部分包可做种子：
       >
@@ -189,7 +199,7 @@
 
 2. master工程的修复，源码修改提交到master；针对22.03:LTS:Next所做的源码修改，源码提交到22.03:LTS:Next分支；
 
-   
+
 
 ### 3.4 计划
 
@@ -210,4 +220,3 @@
    （2）对比minios的450+个包
 
 3. 开始针对构建失败的包修复
-
