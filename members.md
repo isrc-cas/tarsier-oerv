@@ -6,15 +6,8 @@
 | 旭舟                 | 华为 oE/RV 负责       |  | whoisxxx      |      whoisxxx      |      |
 | 席静                   | 项目经理   |            | xijing666     | xijing21            |      |
 | 王俊强                 | 技术导师   |            | wangjunqiang | GeassCore |      |
-| 马驰                   | 技术导师   |            | mc964203886   | mc964203886         |      |
-| 吴洁                   | 测试主管   |            | jean9823      | jiewu-plct          |      |
+| 马驰                   | 技术人员   |            | mc964203886   | mc964203886         |      |
+| 吴洁                   | 测试开发   |            | jean9823      | jiewu-plct          |      |
 | 吕晓倩                 | 测试开发       |  | lvxiaoqian      |      lvxiaoqian555      |      |
-| 刘佳伟                 | 在职实习生 | LV2        | liujiawei     | liujiawei929        |      |
-| 孙喆炘  [zhé xīn]      | 在职实习生 | LV2        | zxs-un      | zxs-un              |      |
-| 李诗洋                 | 在职实习生 | LV1 | lishiyangasdf | asdf1113            |      |
-| 许志凌                 | 在职实习生 | LV1 | xinminst  | xinminst            |      |
-| 邹通成                 | 在职实习生 | LV1 | zou-tongcheng | Wenxiang233         |      |
-| 许嘉玲                 | 在职实习生 | LV1 | xujialing | glutinous-rice-wine |      |
-| 陈泽睿                  | 在职实习生 |LV1 | chenzerui23    | Chenzerui23   |   |
-| 冯宇                   | 在职实习生 | LV1 | fengyu | 1isfirst   |
-| 金钜涵                 | 在职实习生 | LV1 | jinjuhan | BigBrotherJu |
+| 孙喆炘  [zhé xīn]      | 构建实习生 | LV2        | zxs-un      | zxs-un              |      |
+| 金钜涵                 | 测试实习生 | LV1 | jinjuhan | BigBrotherJu ||

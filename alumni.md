@@ -11,4 +11,10 @@
 | 刘洋                 | 志愿者 | LV1 | LiuY328     | LiuYang328           |    |
 | 温智翔                 |志愿者  | LV1 | WenZhixiang   | WenZhixiang      |     |
 | 杨心仪                 | 志愿者 | LV1 | yxychristina     | yxycrhistina           |    |
-
+| 刘佳伟                 | 志愿者 | LV2        | liujiawei     | liujiawei929        |      |
+| 李诗洋                 | 志愿者 | LV1 | lishiyangasdf | asdf1113            |      |
+| 许志凌                 | 志愿者 | LV1 | xinminst  | xinminst            |      |
+| 许嘉玲                 | 志愿者 | LV1 | xujialing | glutinous-rice-wine |      |
+| 陈泽睿                  | 志愿者 |LV1 | chenzerui23    | Chenzerui23   |   |
+| 冯宇                   | 志愿者 | LV1 | fengyu | 1isfirst   ||
+| 邹通成                 | 志愿者 | LV1 | zou-tongcheng | Wenxiang233         |      |
