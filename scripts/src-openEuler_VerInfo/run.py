@@ -47,7 +47,20 @@ def get_obsdata(account):
         status = re.search('code=".*"', status_data).group()
         status = status.split('"')[1]
         # print ('status', status)
-        pkgdict = dict(package=pkg, git=gitinfo, revision=revision, status=status)
+        rpm_url = 'https://build.openeuler.org/build/openEuler:Mainline:RISC-V/standard_riscv64/riscv64/{}'.format(pkg)
+        rpm_resp = requests.get(rpm_url,auth=HTTPBasicAuth(account['user'],account['password']))
+        rpm_data = rpm_resp.text
+        # print ('rpm_data', rpm_data)
+        rpm_pattern = 'filename=.*.src.rpm'
+        try:
+            rpmver = re.search(rpm_pattern, rpm_data).group()[10:]
+            # print ('rpmver', rpmver)
+            rpm_history = 'Yes'
+        except:
+            rpm_history = 'No'
+            rpmver = 'None'
+            # print ('rpmver', rpmver)
+        pkgdict = dict(package=pkg,git=gitinfo,revision=revision,status=status,rpm=rpm_history,rpmver=rpmver)
         # print ('pkgdict', pkgdict)
         pkginfo_list.append(pkgdict)
         print ('pkginfo_list length', len(pkginfo_list))
@@ -115,7 +128,7 @@ def get_giteedata(pkgsinfo,branchlist,headers,token,org):
             # print ('update_priority', update_priority)
         pkglist = [pkgsinfo.index(pkg)+1,pkg['package'],pkg['git'],pkg['revision'],pkg['status']]
         pkglist.extend(gitee_verlist)
-        pkglist.extend([lastest_date, update_priority])
+        pkglist.extend([lastest_date, update_priority,pkg['rpm'],pkg['rpmver']])
         # print ('pkglist', pkglist)
         pkgsver_list.append(pkglist)
         # print ('pkgsver_list', pkgsver_list)
