@@ -1,0 +1,6 @@
+requests
+json
+re
+time
+openpyxl
+configparser
