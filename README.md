@@ -1,6 +1,6 @@
 # openEuler-RISC-V
 
-Project magament for porting openEuler to RISC-V
+Project management for porting openEuler to RISC-V
 
 本项目仅用于 openEuler for RISC-V 项目的管理和交流。请勿提交任何代码PR到这个仓库。
 
