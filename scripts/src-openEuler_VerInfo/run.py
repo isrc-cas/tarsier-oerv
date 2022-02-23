@@ -7,7 +7,7 @@ import re
 import datetime
 import csv
 
-def get_obsdata(account):
+def get_obsdata(account,repolist):
     pkgs_url = 'https://build.openeuler.org/source/openEuler:Mainline:RISC-V'
     pkgs_resp = requests.get(pkgs_url,auth=HTTPBasicAuth(account['user'],account['password']))
     pkgs_data = pkgs_resp.text
@@ -40,27 +40,32 @@ def get_obsdata(account):
             gitinfo = 'None'
             revision = 'None'
             print ('Cannot get url and revision!')
-        status_url = 'https://build.openeuler.org/build/openEuler:Mainline:RISC-V/standard_riscv64/riscv64/{}/_status'.format(pkg)
-        status_resp = requests.get(status_url,auth=HTTPBasicAuth(account['user'],account['password']))
-        status_data = status_resp.text
-        # print ('status_data', status_data)
-        status = re.search('code=".*"', status_data).group()
-        status = status.split('"')[1]
-        # print ('status', status)
-        rpm_url = 'https://build.openeuler.org/build/openEuler:Mainline:RISC-V/standard_riscv64/riscv64/{}'.format(pkg)
-        rpm_resp = requests.get(rpm_url,auth=HTTPBasicAuth(account['user'],account['password']))
-        rpm_data = rpm_resp.text
-        # print ('rpm_data', rpm_data)
-        rpm_pattern = 'filename=.*.src.rpm'
-        try:
-            rpmver = re.search(rpm_pattern, rpm_data).group()[10:]
-            # print ('rpmver', rpmver)
-            rpm_history = 'Yes'
-        except:
-            rpm_history = 'No'
-            rpmver = 'None'
-            # print ('rpmver', rpmver)
-        pkgdict = dict(package=pkg,git=gitinfo,revision=revision,status=status,rpm=rpm_history,rpmver=rpmver)
+        statuslist = []
+        rpmlist = []
+        for repo in repolist:
+            status_url = 'https://build.openeuler.org/build/openEuler:Mainline:RISC-V/{}/riscv64/{}/_status'.format(repo,pkg)
+            status_resp = requests.get(status_url,auth=HTTPBasicAuth(account['user'],account['password']))
+            status_data = status_resp.text
+            # print ('status_data', status_data)
+            status = re.search('code=".*"', status_data).group()
+            status = status.split('"')[1]
+            # print ('status', status)
+            statuslist.append(status)
+            rpm_url = 'https://build.openeuler.org/build/openEuler:Mainline:RISC-V/{}/riscv64/{}'.format(repo,pkg)
+            rpm_resp = requests.get(rpm_url,auth=HTTPBasicAuth(account['user'],account['password']))
+            rpm_data = rpm_resp.text
+            # print ('rpm_data', rpm_data)
+            rpm_pattern = 'filename=.*.src.rpm'
+            try:
+                rpm_ver = re.search(rpm_pattern, rpm_data).group()[10:]
+                # print ('rpm_ver', rpm_ver)
+                rpm_history = 'Yes'
+            except:
+                rpm_history = 'No'
+                rpm_ver = 'None'
+                # print ('rpm_ver', rpm_ver)
+            rpmlist.extend([rpm_history, rpm_ver])
+        pkgdict = dict(package=pkg,git=gitinfo,revision=revision,status=statuslist,rpm=rpmlist)
         # print ('pkgdict', pkgdict)
         pkginfo_list.append(pkgdict)
         print ('pkginfo_list length', len(pkginfo_list))
@@ -126,9 +131,11 @@ def get_giteedata(pkgsinfo,branchlist,headers,token,org):
             compare_verlist = [x for x in compare_verlist if x != 'None']
             update_priority = len(list(set(compare_verlist)))
             # print ('update_priority', update_priority)
-        pkglist = [pkgsinfo.index(pkg)+1,pkg['package'],pkg['git'],pkg['revision'],pkg['status']]
+        pkglist = [pkgsinfo.index(pkg)+1,pkg['package'],pkg['git'],pkg['revision']]
+        pkglist.extend(pkg['status'])
         pkglist.extend(gitee_verlist)
-        pkglist.extend([lastest_date, update_priority,pkg['rpm'],pkg['rpmver']])
+        pkglist.extend([lastest_date, update_priority])
+        pkglist.extend(pkg['rpm'])
         # print ('pkglist', pkglist)
         pkgsver_list.append(pkglist)
         # print ('pkgsver_list', pkgsver_list)
@@ -144,7 +151,8 @@ def create_csvfile(pkgsver,report_header,csvfile):
 
 if __name__=="__main__":
     obs_account = constant.obs_account
-    pkgsinfo = get_obsdata(obs_account)
+    repolist = constant.repolist
+    pkgsinfo = get_obsdata(obs_account,repolist)
     headers = constant.headers
     token = constant.token
     org = constant.org
