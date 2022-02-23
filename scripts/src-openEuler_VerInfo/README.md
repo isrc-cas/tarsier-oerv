@@ -24,16 +24,19 @@ branchlist = ['master', 'openEuler-22.03-LTS', 'openEuler-22.03-LTS-Next']
 report_header = [
     'No.',
     'Package',
-    'OBS_repository',
-    'OBS_commit_id',
-    'obs_status',
-    'gitee_master',
-    'gitee_openEuler-22.03-LTS',
-    'gitee_openEuler-22.03-LTS-Next',
+    'obs repository',
+    'obs commit id',
+    'obs standard_riscv64 status',
+    'obs advanced_riscv64 status',
+    'gitee master',
+    'gitee openEuler-22.03-LTS',
+    'gitee openEuler-22.03-LTS-Next',
     'Lastest Update',
     'Upgrade Priority',
-    'has rpm history',
-    'rpm version'
+    'has rpm history in standard_riscv64',
+    'rpm version in standard_riscv64',
+    'has rpm history in advanced_riscv64',
+    'rpm version in advanced_riscv64'
     ]
 ````
 
@@ -45,23 +48,29 @@ No. : 序号
 
 Package: 包名
 
-obs_repository: obs service文件中的gitee address
+obs repository: obs service文件中的gitee address
 
-obs_commit_id: obs service文件中的gitee commit id
+obs commit id: obs service文件中的gitee commit id
 
-obs_status: obs中包的当前状态
+obs standard_riscv64 status: obs中包在standard_riscv64库里的当前状态
 
-gitee_master: 源码仓src-openeuler中master分支最新的commit id
+obs advanced_riscv64 status: obs中包在advanced_riscv64库里的当前状态
 
-gitee_openEuler-22.03-LTS: 源码仓src-openeuler中openEuler-22.03-LTS分支最新的commit id
+gitee master: 源码仓src-openeuler中master分支最新的commit id
 
-gitee_openEuler-22.03-LTS-Next: 源码仓src-openeuler中openEuler-22.03-LTS-Next分支最新的commit id
+gitee openEuler-22.03-LTS: 源码仓src-openeuler中openEuler-22.03-LTS分支最新的commit id
+
+gitee openEuler-22.03-LTS-Next: 源码仓src-openeuler中openEuler-22.03-LTS-Next分支最新的commit id
 
 Lastest Update: 在obs和源码仓src-openeuler的3个分支中时间最新的commit
 
-has rpm history: 是否有曾经编译成功的rpm包
+has rpm history in standard_riscv64: 在standard_riscv64库里是否有曾经编译成功的rpm包
 
-rpm version: 编译成功的源码包名
+rpm version in standard_riscv64: 在standard_riscv64库里编译成功的源码包名
+
+has rpm history in advanced_riscv64: 在advanced_riscv64库里是否有曾经编译成功的rpm包
+
+rpm version in advanced_riscv64: 在advanced_riscv64库里编译成功的源码包名
 
 0：代表obs最新；
 
