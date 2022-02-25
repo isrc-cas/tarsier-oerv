@@ -2,7 +2,7 @@ import os
 import time
 
 
-token = your token of gitee account
+token = 'your token of gitee account'
 obs_account = {'user':your username of obs account , 'password':your password of obs account}
 repolist = ['standard_riscv64', 'advanced_riscv64']
 branchlist = ['master', 'openEuler-22.03-LTS', 'openEuler-22.03-LTS-Next']
