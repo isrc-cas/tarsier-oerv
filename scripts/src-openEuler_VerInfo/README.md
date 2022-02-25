@@ -11,7 +11,7 @@
 2)使用前需要在constant.py文件中设置以下参数
 
 ````
-token = your token of gitee account
+token = 'your token of gitee account'
 obs_account = {'user':your username of obs account , 'password':your password of obs account}
 ````
 
