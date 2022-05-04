@@ -11,3 +11,8 @@ node_modules
 _book
 
 /pubkeys/
+
+*.swp
+*.tmp
+*.bak
+*~
