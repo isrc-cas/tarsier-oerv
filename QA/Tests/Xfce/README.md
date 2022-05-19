@@ -1,5 +1,7 @@
 # 在 QEMU上的 openEuler RISC-V 中启动并测试 Xfce
 
+**备注：由于gitee政策变更，临时转为GitHub**
+
 ## 准备阶段
 
 1.  编译支持视频输出的 qemu
