@@ -1,6 +1,4 @@
-此脚本的目的是在obs上批量创建包，由于使用osc命令创建包需要权限（只有创建该project的人才有该权限）
-
-所以此脚本目前只完成上传_service文件的功能，在此之前，如果目标project不是你创建的，需要将需要创建的包列表发送给project的创建者
+此脚本的目的是在obs上批量创建包
 
 脚本使用步骤如下
 
@@ -52,12 +50,11 @@ python3 getLatestCommit.py
 此步骤需要手动，在表格中筛选需要的包和commit id，存放在packageList.txt中
 ![image](https://user-images.githubusercontent.com/89906695/167054328-03f7e409-21c9-4409-bb99-d8f03dff08d3.png)
 
-osc上传_service
+osc创建包并上传_service文件
 ===
 准备：
-1. 如果需要,将包列表发送给有权限加包的人，请他帮忙在obs上创建包
-2. 将packageList.txt,service_demo,updateServiceToObs.sh放到配置好osc环境的qemu中
-3. osc环境中须有该project目录，如果没有请check out 目录, osc co <your project/your package>
+1. 将packageList.txt,service_demo,addPackageToObs.sh放到配置好osc环境的qemu中
+2. osc环境中须有该project目录，如果没有请check out 目录, osc co <your project/your package>
 
 命令：
-bash updateServiceToObs.sh <your project>
+bash addPackageToObs.sh \<your project\>
