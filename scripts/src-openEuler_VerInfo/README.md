@@ -31,7 +31,7 @@ report_header = [
     'gitee master',
     'gitee openEuler-22.03-LTS',
     'gitee openEuler-22.03-LTS-Next',
-    'Lastest Update',
+    'Latest Update',
     'Upgrade Priority',
     'has rpm history in standard_riscv64',
     'rpm version in standard_riscv64',
@@ -62,7 +62,7 @@ gitee openEuler-22.03-LTS: 源码仓src-openeuler中openEuler-22.03-LTS分支最
 
 gitee openEuler-22.03-LTS-Next: 源码仓src-openeuler中openEuler-22.03-LTS-Next分支最新的commit id
 
-Lastest Update: 在obs和源码仓src-openeuler的3个分支中时间最新的commit
+Latest Update: 在obs和源码仓src-openeuler的3个分支中时间最新的commit
 
 has rpm history in standard_riscv64: 在standard_riscv64库里是否有曾经编译成功的rpm包
 

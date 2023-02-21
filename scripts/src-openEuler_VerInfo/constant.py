@@ -16,7 +16,7 @@ report_header = [
     'gitee master',
     'gitee openEuler-22.03-LTS',
     'gitee openEuler-22.03-LTS-Next',
-    'Lastest Update',
+    'Latest Update',
     'Upgrade Priority',
     'has rpm history in standard_riscv64',
     'rpm version in standard_riscv64',
