@@ -22,7 +22,6 @@ def get_pkgs(url, account, project, filedir):
 
 
 def download_servicefile(url, account, project, firdir, packagelist):
-    # pkg = 'aalib'
     for pkg in packagelist:
         print ('downloading {}'.format(pkg))
         get_service_url = '{}/source/{}/{}/_service'.format(url, project, pkg)
