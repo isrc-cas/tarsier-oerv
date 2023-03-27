@@ -41,21 +41,33 @@ def download_servicefile(url, account, project, filedir, packagelist):
 
 def download_specfile(url, account, project, filedir, packagelist):
     for pkg in packagelist:
-        get_spec_url = '{}/package/view_file/{}/{}/_service:tar_scm:{}.spec?expand=1'.format(url, project, pkg, pkg)
-        get_spec_resp = requests.get(get_spec_url,auth=HTTPBasicAuth(account['username'],account['password']))
-        # print (get_spec_resp.text, get_spec_resp.status_code)
-        if get_spec_resp.status_code == 200:
-            html = etree.HTML(get_spec_resp.text)
-            content = etree.tostring(html).decode()
-            # print ('content>>>', content)
-            pattern = '<textarea name="editor_0" id="editor_0" cols="0" rows="0" class="form-control">((.|\n)*)</textarea>'
-            # print (re.search(pattern, content).group(1))
-            specfilepath = os.path.join(filedir, '{}.spec'.format(pkg))
-            with open(specfilepath, 'w') as f:
-                f.write(re.search(pattern, content).group(1))
-            print ('download {} spec file successfully'.format(pkg))
-        else:
-            print ('download {} spec file unsuccessfully'.format(pkg))
+        print ('downloading {} spec file'.format(pkg))
+        get_pkg_url = '{}/package/show/{}/{}'.format(url, project, pkg)
+        get_pkg_resp = requests.get(get_pkg_url,auth=HTTPBasicAuth(account['username'],account['password']))
+        try:
+            specfile_link = re.search('<a href="(/package/view_file/.*\.spec\?expand=1)">', get_pkg_resp.text).group(1)
+            get_spec_url = url + specfile_link
+            get_spec_resp = requests.get(get_spec_url,auth=HTTPBasicAuth(account['username'],account['password']))
+            # print (get_spec_resp.text, get_spec_resp.status_code)
+            if get_spec_resp.status_code == 200:
+               html = etree.HTML(get_spec_resp.text)
+               content = etree.tostring(html).decode()
+               # print ('content>>>', content)
+               pattern = '<textarea name="editor_0" id="editor_0" cols="0" rows="0" class="form-control">((.|\n)*)</textarea>'
+               # print (re.search(pattern, content).group(1))
+               specfiledir = os.path.join(filedir, pkg)
+               os.mkdir(specfiledir)
+               specfilepath = os.path.join(specfiledir, '{}.spec'.format(pkg))
+               with open(specfilepath, 'w') as f:
+                  try:
+                      f.write(re.search(pattern, content).group(1))
+                  except:
+                      print ('download {} spec file unsuccessfully'.format(pkg))
+               print ('download {} spec file successfully'.format(pkg))
+            else:
+                print ('download {} spec file unsuccessfully'.format(pkg))
+        except:
+            print ('there is not spec file in {}'.format(pkg))
 
 
 
