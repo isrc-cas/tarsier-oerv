@@ -30,6 +30,6 @@
 
    当下载service文件时，会获取obs指定工程下所有包名，并存储到当前目录下 servicefile\packagelist.txt 文件中，下载指定工程中所有包的_service文件到当前目录下servicefile文件夹中的对应包名下，例如包名是adcli， _service就会下载到当前目录下 servicefile\adcli\ 路径下
 
-   当下载spec文件时，会获取obs指定工程下所有包名，并存储到当前目录下 specfile\packagelist.txt 文件中，下载指定工程中所有包的spec文件到当前目录下specfile文件夹下
+   当下载spec文件时，会获取obs指定工程下所有包名，并存储到当前目录下 specfile\packagelist.txt 文件中，下载指定工程中所有包的spec文件到当前目录下specfile文件夹中的对应包名下，例如包名是adcli，spec文件就会下载到当前目录下 specfile\adcli\ 路径下
 
    
