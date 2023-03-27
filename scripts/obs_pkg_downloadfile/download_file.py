@@ -37,6 +37,9 @@ def download_servicefile(url, account, project, filedir, packagelist):
            print ('download {} _service file successfully'.format(pkg))
         else:
             print ('download {} _service file unsuccessfully'.format(pkg))
+            failedrecorderpath = os.path.join(filedir, 'download_failed_recorder.txt')
+            with open(failedrecorderpath, 'a') as f:
+                f.write('download {} _service file unsuccessfully\n'.format(pkg))
 
 
 def download_specfile(url, account, project, filedir, packagelist):
@@ -44,6 +47,7 @@ def download_specfile(url, account, project, filedir, packagelist):
         print ('downloading {} spec file'.format(pkg))
         get_pkg_url = '{}/package/show/{}/{}'.format(url, project, pkg)
         get_pkg_resp = requests.get(get_pkg_url,auth=HTTPBasicAuth(account['username'],account['password']))
+        failedrecorderpath = os.path.join(filedir, 'download_failed_recorder.txt')
         try:
             specfile_link = re.search('<a href="(/package/view_file/.*\.spec\?expand=1)">', get_pkg_resp.text).group(1)
             get_spec_url = url + specfile_link
@@ -57,17 +61,24 @@ def download_specfile(url, account, project, filedir, packagelist):
                # print (re.search(pattern, content).group(1))
                specfiledir = os.path.join(filedir, pkg)
                os.mkdir(specfiledir)
-               specfilepath = os.path.join(specfiledir, '{}.spec'.format(pkg))
+               specfile_name = re.search('_service:.*:(.*\.spec)\?expand=1', specfile_link).group(1)
+               specfilepath = os.path.join(specfiledir, specfile_name)
                with open(specfilepath, 'w') as f:
                   try:
                       f.write(re.search(pattern, content).group(1))
+                      print ('download {} spec file successfully'.format(pkg))
                   except:
                       print ('download {} spec file unsuccessfully'.format(pkg))
-               print ('download {} spec file successfully'.format(pkg))
+                      with open(failedrecorderpath, 'a') as f:
+                        f.write('download {} spec file unsuccessfully\n'.format(pkg))      
             else:
                 print ('download {} spec file unsuccessfully'.format(pkg))
+                with open(failedrecorderpath, 'a') as f:
+                    f.write('download {} spec file unsuccessfully\n'.format(pkg))    
         except:
             print ('there is not spec file in {}'.format(pkg))
+            with open(failedrecorderpath, 'a') as f:
+                f.write('there is not spec file in {}\n'.format(pkg))
 
 
 
