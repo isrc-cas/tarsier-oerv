@@ -8,8 +8,9 @@
 
    ````
    obs_account = {'user':your username of obs account , 'password':your password of obs account}
-   obs_project = 'openEuler:Mainline:RISC-V'
-   repolist = ['standard_riscv64', 'advanced_riscv64']
+   obs_project = 'openEuler:23.03'
+   repolist = ['23.02', '23.03']
+   obs_url = 'https://build.tarsier-infra.com'
    ````
 
    obs_account 设置的是obs账号的用户名和密码
@@ -17,6 +18,8 @@
    obs_project 设置要抓取数据的obs工程
 
    repolist 设置要抓取数据的工程下的仓库
+
+   obs_url 设置obs url
 
 3. 执行python run.py运行脚本，会在脚本所在目录生成obs_pkginfo
 
