@@ -37,7 +37,7 @@ def get_obsdata(url,account,repolist,project):
             print ('Cannot get revision!')
         statuslist = []
         for repo in repolist:
-            status_url = '{}/build/{}/{}/riscv64/{}/_status'.format(url,project,repo,pkg)
+            status_url = '{}/build/{}/{}/{}/{}/_status'.format(url,project,repo['repo'],repo['arch'],pkg)
             status_resp = requests.get(status_url,auth=HTTPBasicAuth(account['user'],account['password']))
             status_data = status_resp.text
             # print ('status_data', status_data)

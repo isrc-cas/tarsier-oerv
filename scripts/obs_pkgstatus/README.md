@@ -7,9 +7,9 @@
 2. 在para.py文件中设置以下参数
 
    ````
-   obs_account = {'user':your username of obs account , 'password':your password of obs account}
+   obs_account = {'user': your username of obs account , 'password': your password of obs account}
    obs_project = 'openEuler:23.03'
-   repolist = ['23.02', '23.03']
+   repolist = [{'arch': 'riscv64', 'repo': '23.02'}, {'arch': 'riscv64', 'repo': '23.03'}]
    obs_url = 'https://build.tarsier-infra.com'
    ````
 
@@ -17,7 +17,7 @@
 
    obs_project 设置要抓取数据的obs工程
 
-   repolist 设置要抓取数据的工程下的仓库
+   repolist 设置要抓取数据的工程下的仓库以及其对应的架构
 
    obs_url 设置obs url
 
