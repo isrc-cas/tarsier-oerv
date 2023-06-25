@@ -12,6 +12,7 @@
    obs_account = {'username':'username of your obs account', 'password':'password of your obs account'}
    obs_url = 'https://build.tarsier-infra.com'
    obs_project = 'openEuler:23.03'
+   obs_buildinfo = {'repo': '23.03', 'arch': 'riscv64'}
    obs_packagelist = ['adcli', 'python-docker']
    ````
 
@@ -20,6 +21,8 @@
    obs_url: obs网址
 
    obs_project: 要执行Trigger Rebuild的包所在的obs工程
+
+   obs_buildinfo: 要执行Trigger Rebuild的包的仓库和架构
 
    obs_packagelist: 要执行Trigger Rebuild的包列表
 
