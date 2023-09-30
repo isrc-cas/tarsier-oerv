@@ -81,13 +81,13 @@ def get_PRInfo(pkgs,headers,token,owner):
                     break
             for item in comments_list:
                 if item['user']['name'] != 'openeuler-ci-bot':
-                    lastest_comment_time = datetime.datetime.strptime(item['updated_at'],"%Y-%m-%dT%H:%M:%S+08:00").strftime("%Y-%m-%d %H:%M:%S")
-                    lastest_comment_user = item['user']['name']
+                    latest_comment_time = datetime.datetime.strptime(item['updated_at'],"%Y-%m-%dT%H:%M:%S+08:00").strftime("%Y-%m-%d %H:%M:%S")
+                    latest_comment_user = item['user']['name']
                     break
                 else:
-                    lastest_comment_time = ''
-                    lastest_comment_user = ''
-                # print('lastest_comment', lastest_comment_time,lastest_comment_user)
+                    latest_comment_time = ''
+                    latest_comment_user = ''
+                # print('latest_comment', latest_comment_time,latest_comment_user)
             prinfo = [
                 pkg, 
                 prlist[0]['user']['name'],
@@ -95,8 +95,8 @@ def get_PRInfo(pkgs,headers,token,owner):
                 prlist[0]['state'],
                 created_time,
                 updated_time,
-                lastest_comment_time,
-                lastest_comment_user,
+                latest_comment_time,
+                latest_comment_user,
                 ]
         else:
             prinfo = [pkg,'','','','','','','']

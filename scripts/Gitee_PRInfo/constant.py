@@ -10,8 +10,8 @@ report_header = [
     'rvPRStatus',
     'created_at',
     'updated_at',
-    'lastest comment time',
-    'lastest comment submitter'
+    'latest comment time',
+    'latest comment submitter'
     ]
 headers = {
     'Content-Type': 'application/json;charset=UTF-8'

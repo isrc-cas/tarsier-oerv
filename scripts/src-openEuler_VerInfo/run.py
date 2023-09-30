@@ -76,7 +76,7 @@ def get_giteedata(pkgsinfo,branchlist,headers,token,org):
     for pkg in pkgsinfo:
         print ('gitee package', pkg)
         gitee_verlist = []
-        lastest_datelist = []
+        latest_datelist = []
         for branch in branchlist:
             branch_url = 'https://gitee.com/api/v5/repos/{}/{}/branches/{}'.format(org,pkg['package'],branch)
             params = {
@@ -99,11 +99,11 @@ def get_giteedata(pkgsinfo,branchlist,headers,token,org):
                 print ('Branch {} does not exist'.format(branch))
             # print ('branch', branch)
             gitee_verlist.append(commitid)
-            lastest_datelist.append(commitdate)
+            latest_datelist.append(commitdate)
             # print ('gitee_verlist', gitee_verlist)
-            # print ('lastest_datelist', lastest_datelist)
+            # print ('latest_datelist', latest_datelist)
         if gitee_verlist == ['None', 'None', 'None']:
-            lastest_date = 'None'
+            latest_date = 'None'
             update_priority = 'None'
         else:
             if pkg['revision'] != 'None': 
@@ -124,17 +124,17 @@ def get_giteedata(pkgsinfo,branchlist,headers,token,org):
             compare_verlist = gitee_verlist
             compare_verlist = compare_verlist + [pkg['revision']]
             # print ('gitee_verlist', gitee_verlist)
-            lastest_datelist.insert(0,obscommit_date)
-            # print ('lastest_datelist', lastest_datelist)
-            lastest_date = lastest_datelist.index(max(lastest_datelist))
-            # print ('lastest_date', lastest_date)
+            latest_datelist.insert(0,obscommit_date)
+            # print ('latest_datelist', latest_datelist)
+            latest_date = latest_datelist.index(max(latest_datelist))
+            # print ('latest_date', latest_date)
             compare_verlist = [x for x in compare_verlist if x != 'None']
             update_priority = len(list(set(compare_verlist)))
             # print ('update_priority', update_priority)
         pkglist = [pkgsinfo.index(pkg)+1,pkg['package'],pkg['git'],pkg['revision']]
         pkglist.extend(pkg['status'])
         pkglist.extend(gitee_verlist)
-        pkglist.extend([lastest_date, update_priority])
+        pkglist.extend([latest_date, update_priority])
         pkglist.extend(pkg['rpm'])
         # print ('pkglist', pkglist)
         pkgsver_list.append(pkglist)
